@@ -47,7 +47,7 @@
 
 </details>
 
-# logging.shlib
+# logging.lib.sh
 
 A robust, production-ready logging utility library for Bash scripts with automatic error tracing, safe trap chaining, and zero-setup crash diagnostics.
 
@@ -65,7 +65,7 @@ A robust, production-ready logging utility library for Bash scripts with automat
 
 ```bash
 #!/usr/bin/env bash
-source ./logging.shlib
+source ./logging.lib.sh
 
 # Initialize logging with your script name
 logging::init "$0"
@@ -88,10 +88,10 @@ Output:
 
 ## Installation
 
-Simply copy `logging.shlib` to your project and source it:
+Simply copy `logging.lib.sh` to your project and source it:
 
 ```bash
-source /path/to/logging.shlib
+source /path/to/logging.lib.sh
 ```
 
 ### Requirements
@@ -243,7 +243,7 @@ Call `logging::init` as early as possible in your script:
 ```bash
 #!/usr/bin/env bash
 set -Eeuo pipefail
-source ./logging.shlib
+source ./logging.lib.sh
 logging::init "$0"
 
 # Rest of your script...
@@ -261,13 +261,13 @@ logging::init "$0"
 With `logging::init`, you don't need explicit error handling for most cases:
 
 ```bash
-# Without logging.shlib
+# Without logging.lib.sh
 if ! command; then
     echo "Error: command failed" >&2
     exit 1
 fi
 
-# With logging.shlib - errors are automatically logged with context
+# With logging.lib.sh - errors are automatically logged with context
 command  # Any failure is logged with file:line:command
 ```
 
@@ -340,7 +340,7 @@ set -Eeuo pipefail
 ```bash
 #!/usr/bin/env bash
 set -Eeuo pipefail
-source ./logging.shlib
+source ./logging.lib.sh
 logging::init "$0"
 
 logging::log_info "Starting CI pipeline..."
@@ -367,7 +367,7 @@ logging::log_info "Pipeline completed successfully"
 
 ```bash
 #!/usr/bin/env bash
-source ./logging.shlib
+source ./logging.lib.sh
 logging::init "$0"
 
 for attempt in {1..3}; do
@@ -392,7 +392,7 @@ done
 ```bash
 # main.sh
 #!/usr/bin/env bash
-source ./logging.shlib
+source ./logging.lib.sh
 logging::init "$0"
 
 logging::log_info "Starting batch processing"
