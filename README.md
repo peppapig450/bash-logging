@@ -1,4 +1,5 @@
-# Bash Logging
+# Bashing Logs
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
 ## Table of Contents
 
