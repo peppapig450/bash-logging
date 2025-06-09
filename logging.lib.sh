@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # ==============================================================================
-# logging.shlib — Logging utilities for Bash scripts
+# logging.lib.sh — Logging utilities for Bash scripts
 #
 # This library provides timestamped, color-coded log output and error handling
 # utilities suitable for CI pipelines or general-purpose scripting.
@@ -15,7 +15,7 @@
 #   - Drop-in error trap handler and safe trap appender
 #
 # Usage:
-#   source ./logging.shlib
+#   source ./logging.lib.sh
 #   logging::log_info "Things are fine"
 #   logging::add_err_trap
 #
@@ -106,7 +106,7 @@ logging::log_fatal() {
 # Usage:
 #   logging::init "$0"
 #
-# This should be called once after sourcing logging.shlib.
+# This should be called once after sourcing logging.lib.sh.
 logging::init() {
   if (($# != 1)); then
     logging::log_warn "logging::init requires a script name argument."
