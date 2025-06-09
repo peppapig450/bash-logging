@@ -1,53 +1,51 @@
 # Bashing Logs
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
-## Table of Contents
 
-* [Features](#features)
-* [Quick Start](#quick-start)
-* [Installation](#installation)
-* [Requirements](#requirements)
-* [API Reference](#api-reference)
+<details>
+<summary><strong>📋 Table of Contents</strong></summary>
 
-  * [Core Logging Functions](#core-logging-functions)
+- [Bashing Logs](#bashing-logs)
+- [logging.lib.sh](#logginglibsh)
+  - [Features](#features)
+  - [Quick Start](#quick-start)
+  - [Installation](#installation)
+    - [Requirements](#requirements)
+  - [API Reference](#api-reference)
+    - [Core Logging Functions](#core-logging-functions)
+      - [`logging::log_info MESSAGE`](#logginglog_info-message)
+      - [`logging::log_warn MESSAGE`](#logginglog_warn-message)
+      - [`logging::log_error MESSAGE`](#logginglog_error-message)
+      - [`logging::log_fatal MESSAGE`](#logginglog_fatal-message)
+    - [Initialization](#initialization)
+      - [`logging::init SCRIPT_NAME`](#logginginit-script_name)
+    - [Advanced Functions](#advanced-functions)
+      - [`logging::add_err_trap`](#loggingadd_err_trap)
+      - [`logging::add_exit_trap`](#loggingadd_exit_trap)
+      - [`logging::setup_traps`](#loggingsetup_traps)
+  - [The Trap Chaining Magic](#the-trap-chaining-magic)
+    - [The Problem](#the-problem)
+    - [The Solution](#the-solution)
+  - [Zero-Setup Error Diagnostics](#zero-setup-error-diagnostics)
+  - [Best Practices](#best-practices)
+    - [1. Initialize Early](#1-initialize-early)
+    - [2. Use Appropriate Log Levels](#2-use-appropriate-log-levels)
+    - [3. Leverage Automatic Error Tracing](#3-leverage-automatic-error-tracing)
+    - [4. Script Name Context](#4-script-name-context)
+  - [Log Format](#log-format)
+  - [Technical Implementation Details](#technical-implementation-details)
+    - [Shell Detection](#shell-detection)
+    - [Source-Only Execution](#source-only-execution)
+    - [Strict Mode Compatible](#strict-mode-compatible)
+  - [Examples](#examples)
+    - [CI Pipeline Script](#ci-pipeline-script)
+    - [Error Recovery Script](#error-recovery-script)
+    - [Multi-Script Coordination](#multi-script-coordination)
+  - [Contributing](#contributing)
+  - [License](#license)
+  - [Credits](#credits)
 
-    * [`logging::log_info MESSAGE`](#logginglog_info-message)
-    * [`logging::log_warn MESSAGE`](#logginglog_warn-message)
-    * [`logging::log_error MESSAGE`](#logginglog_error-message)
-    * [`logging::log_fatal MESSAGE`](#logginglog_fatal-message)
-  * [Initialization](#initialization)
-
-    * [`logging::init SCRIPT_NAME`](#logginginit-script_name)
-* [Advanced Functions](#advanced-functions)
-
-  * [`logging::add_err_trap`](#loggingadd_err_trap)
-  * [`logging::add_exit_trap`](#loggingadd_exit_trap)
-  * [`logging::setup_traps`](#loggingsetup_traps)
-* [The Trap Chaining Magic](#the-trap-chaining-magic)
-
-  * [The Problem](#the-problem)
-  * [The Solution](#the-solution)
-* [Zero-Setup Error Diagnostics](#zero-setup-error-diagnostics)
-* [Best Practices](#best-practices)
-
-  * [1. Initialize Early](#1-initialize-early)
-  * [2. Use Appropriate Log Levels](#2-use-appropriate-log-levels)
-  * [3. Leverage Automatic Error Tracing](#3-leverage-automatic-error-tracing)
-  * [4. Script Name Context](#4-script-name-context)
-* [Log Format](#log-format)
-* [Technical Implementation Details](#technical-implementation-details)
-
-  * [Shell Detection](#shell-detection)
-  * [Source-Only Execution](#source-only-execution)
-  * [Strict Mode Compatible](#strict-mode-compatible)
-* [Examples](#examples)
-
-  * [CI Pipeline Script](#ci-pipeline-script)
-  * [Error Recovery Script](#error-recovery-script)
-  * [Multi-Script Coordination](#multi-script-coordination)
-* [Contributing](#contributing)
-* [License](#license)
-* [Credits](#credits)
+</details>
 
 # logging.shlib
 
@@ -55,13 +53,13 @@ A robust, production-ready logging utility library for Bash scripts with automat
 
 ## Features
 
-* 🎨 **Color-coded output** - INFO (green), WARN (yellow), ERROR (red) for better visibility in CI pipelines
-* ⏰ **UTC timestamps** - ISO 8601 formatted timestamps for all log messages
-* 🔍 **Automatic error tracing** - Zero-setup crash diagnostics with file, line number, and command information
-* 🔗 **Safe trap chaining** - Perl-powered trap parsing that preserves existing ERR/EXIT handlers
-* 📝 **Script name prefixing** - Optional script identification in log output
-* 🛡️ **Defensive programming** - Shell detection, source-only execution, and strict error handling
-* 🎯 **Namespace convention** - Google Shell Style Guide compliant `namespace::function` naming
+- 🎨 **Color-coded output** - INFO (green), WARN (yellow), ERROR (red) for better visibility in CI pipelines
+- ⏰ **UTC timestamps** - ISO 8601 formatted timestamps for all log messages
+- 🔍 **Automatic error tracing** - Zero-setup crash diagnostics with file, line number, and command information
+- 🔗 **Safe trap chaining** - Perl-powered trap parsing that preserves existing ERR/EXIT handlers
+- 📝 **Script name prefixing** - Optional script identification in log output
+- 🛡️ **Defensive programming** - Shell detection, source-only execution, and strict error handling
+- 🎯 **Namespace convention** - Google Shell Style Guide compliant `namespace::function` naming
 
 ## Quick Start
 
@@ -98,9 +96,9 @@ source /path/to/logging.shlib
 
 ### Requirements
 
-* Bash 4.0+ (enforced at runtime)
-* Standard Unix utilities: `date`, `basename`, `realpath`
-* Perl (for safe trap parsing)
+- Bash 4.0+ (enforced at runtime)
+- Standard Unix utilities: `date`, `basename`, `realpath`
+- Perl (for safe trap parsing)
 
 ## API Reference
 
@@ -150,10 +148,10 @@ logging::init "$0"  # Recommended: use $0 for current script
 
 This function:
 
-* Sets the script name for log prefixing
-* Installs error trap handler for automatic crash diagnostics
-* Sets up cleanup on script exit
-* Chains with any existing ERR/EXIT traps
+- Sets the script name for log prefixing
+- Installs error trap handler for automatic crash diagnostics
+- Sets up cleanup on script exit
+- Chains with any existing ERR/EXIT traps
 
 ### Advanced Functions
 
@@ -212,9 +210,9 @@ perl -lne '
 
 This regex precisely extracts the command from `trap -p` output, handling:
 
-* Escaped single quotes in the command
-* Spaces and special characters
-* Multiple commands separated by semicolons
+- Escaped single quotes in the command
+- Spaces and special characters
+- Multiple commands separated by semicolons
 
 The library then chains the existing handler with its own:
 
@@ -253,10 +251,10 @@ logging::init "$0"
 
 ### 2. Use Appropriate Log Levels
 
-* **INFO**: Normal operational messages
-* **WARN**: Recoverable issues or important notices
-* **ERROR**: Serious problems that need attention
-* **FATAL**: Unrecoverable errors (script will exit)
+- **INFO**: Normal operational messages
+- **WARN**: Recoverable issues or important notices
+- **ERROR**: Serious problems that need attention
+- **FATAL**: Unrecoverable errors (script will exit)
 
 ### 3. Leverage Automatic Error Tracing
 
@@ -291,12 +289,12 @@ All logs follow this format:
 [COLOR][TIMESTAMP][LEVEL][SCRIPT_NAME] MESSAGE[RESET]
 ```
 
-* **COLOR**: ANSI color code based on level
-* **TIMESTAMP**: ISO 8601 UTC timestamp (YYYY-MM-DDTHH\:MM\:SSZ)
-* **LEVEL**: INFO, WARN, or ERROR
-* **SCRIPT\_NAME**: Basename of the script (optional, set by `logging::init`)
-* **MESSAGE**: Your log message
-* **RESET**: ANSI reset code
+- **COLOR**: ANSI color code based on level
+- **TIMESTAMP**: ISO 8601 UTC timestamp (YYYY-MM-DDTHH\:MM\:SSZ)
+- **LEVEL**: INFO, WARN, or ERROR
+- **SCRIPT\_NAME**: Basename of the script (optional, set by `logging::init`)
+- **MESSAGE**: Your log message
+- **RESET**: ANSI reset code
 
 All output goes to stderr, following Unix conventions.
 
@@ -426,4 +424,3 @@ This project is licensed under the [MIT License](./LICENSE) — see the [LICENSE
 ## Credits
 
 This library follows conventions from the [Google Shell Style Guide](https://google.github.io/styleguide/shellguide.html) and implements production-grade error handling suitable for CI/CD pipelines and critical automation tasks.
-
