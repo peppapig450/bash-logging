@@ -40,10 +40,9 @@ false  # Simulated error
 
 ## Installation
 
-Simply copy `logging.lib.sh` to your project and source it:
-
 ```bash
-source /path/to/logging.lib.sh
+# Download the latest release
+curl -fsLO https://raw.githubusercontent.com/peppapig450/bashing-logs/main/logging.lib.sh
 ```
 
 ### Requirements
