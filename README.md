@@ -45,7 +45,6 @@ false  # Simulated error
 curl -fsLO https://raw.githubusercontent.com/peppapig450/bashing-logs/main/logging.lib.sh
 ```
 
-
 ```bash
 # Source in your script
 source ./logging.lib.sh
@@ -67,10 +66,28 @@ logging::log_error "Failed to connect"
 logging::log_fatal "Critical error" # Exits with status 1
 ```
 
+## Documentation
+
+- **[Getting Started](docs/getting-started.md)** - Installation, basic usage, and configuration
+- **[API Reference](docs/api-reference.md)** - Complete function documentation
+- **[Advanced Features](docs/advanced-features.md)** - Trap chaining, error diagnostics, technical details
+- **[Examples](docs/examples.md)** - Real-world usage patterns and best practices
+- **[Contributing](docs/contributing.md)** - Development guidelines and project standards
+
+## Use Cases
+
+Perfect for:
+
+- **CI/CD pipelines** - Clear timestamped logs with automatic error reporting
+- **System administration** - Robust error handling and diagnostic information
+- **Application deployment** - Script coordination with proper error tracing
+- **Development tooling** - Consistent logging across build and utility scripts
+- **Anything else** - This works well with any Bash script in general
+
 ## License
 
-This project is licensed under the [MIT License](./LICENSE) — see the [LICENSE](./LICENSE) file for details.
+[MIT License](./LICENSE) - see LICENSE file for details.
 
-## Credits
+---
 
-This library follows conventions from the [Google Shell Style Guide](https://google.github.io/styleguide/shellguide.html) and implements production-grade error handling suitable for CI/CD pipelines and critical automation tasks.
+**Need help?** Check the [documentation](docs/) or [open an issue](https://github.com/peppapig450/bashing-logs/issues).
