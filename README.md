@@ -32,12 +32,12 @@ logging::log_warn "Configuration file missing, using defaults"
 false  # Simulated error
 ```
 
-Output:
+**Output:**
 
-```
-[2024-12-15T10:30:45Z][INFO][deploy.sh] Starting deployment...
-[2024-12-15T10:30:46Z][WARN][deploy.sh] Configuration file missing, using defaults
-[2024-12-15T10:30:47Z][ERROR][deploy.sh] Unexpected fatal error in deploy.sh on line 8: false
+```text
+[2025-06-10T04:24:11Z][INFO][deploy.sh] Starting deployment...
+[2025-06-10T04:24:11Z][WARN][deploy.sh] Configuration file missing, using defaults
+[2025-06-10T04:24:11Z][ERROR][deploy.sh] Unexpected fatal error in deploy.sh on line 8: false
 ```
 
 ## Installation
