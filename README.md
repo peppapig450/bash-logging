@@ -4,16 +4,6 @@
 
 A robust, production-ready logging utility library for Bash scripts with automatic error tracing, safe trap chaining, and zero-setup crash diagnostics.
 
-## Features
-
-- 🎨 **Color-coded output** - INFO (green), WARN (yellow), ERROR (red) for better visibility in CI pipelines
-- ⏰ **UTC timestamps** - ISO 8601 formatted timestamps for all log messages
-- 🔍 **Automatic error tracing** - Zero-setup crash diagnostics with file, line number, and command information
-- 🔗 **Safe trap chaining** - Perl-powered trap parsing that preserves existing ERR/EXIT handlers
-- 📝 **Script name prefixing** - Optional script identification in log output
-- 🛡️ **Defensive programming** - Shell detection, source-only execution, and strict error handling
-- 🎯 **Namespace convention** - Google Shell Style Guide compliant `namespace::function` naming
-
 ## Quick Start
 
 ```bash
@@ -39,6 +29,14 @@ false  # Simulated error
 [2025-06-10T04:24:11Z][WARN][deploy.sh] Configuration file missing, using defaults
 [2025-06-10T04:24:11Z][ERROR][deploy.sh] Unexpected fatal error in deploy.sh on line 8: false
 ```
+
+## Key Features
+
+- 🎨 **Color-coded output** - Clear visual distinction between log levels
+- ⏰ **UTC timestamps** - ISO 8601 formatted for consistency
+- 🔍 **Automatic error tracing** - Zero-setup crash diagnostics with file, line, and command
+- 🔗 **Safe trap chaining** - Preserves existing ERR/EXIT handlers
+- 🛡️ **Production-ready** - Defensive programming and strict error handling
 
 ## Installation
 
