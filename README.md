@@ -18,6 +18,7 @@ A robust, production-ready logging utility library for Bash scripts with automat
 
 ```bash
 #!/usr/bin/env bash
+set -Eeuo pipefail
 source ./logging.lib.sh
 
 # Initialize logging with your script name
