@@ -68,11 +68,11 @@ logging::log_fatal "Critical error" # Exits with status 1
 
 ## Documentation
 
-- **[Getting Started](docs/getting-started.md)** - Installation, basic usage, and configuration
-- **[API Reference](docs/api-reference.md)** - Complete function documentation
-- **[Advanced Features](docs/advanced-features.md)** - Trap chaining, error diagnostics, technical details
-- **[Examples](docs/examples.md)** - Real-world usage patterns and best practices
-- **[Contributing](docs/contributing.md)** - Development guidelines and project standards
+- **[Getting Started](getting-started.md)** - Installation, basic usage, and configuration
+- **[API Reference](api-reference.md)** - Complete function documentation
+- **[Advanced Features](advanced-features.md)** - Trap chaining, error diagnostics, technical details
+- **[Examples](examples.md)** - Real-world usage patterns and best practices
+- **[Contributing](contributing.md)** - Development guidelines and project standards
 
 ## Use Cases
 
@@ -84,10 +84,6 @@ Perfect for:
 - **Development tooling** - Consistent logging across build and utility scripts
 - **Anything else** - This works well with any Bash script in general
 
-## License
-
-[MIT License](./LICENSE) - see LICENSE file for details.
-
 ---
 
-**Need help?** Check the [documentation](docs/) or [open an issue](https://github.com/peppapig450/bashing-logs/issues).
+**Need help?** Check the [documentation](.) or [open an issue](https://github.com/peppapig450/bashing-logs/issues).
