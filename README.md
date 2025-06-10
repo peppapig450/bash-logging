@@ -2,53 +2,6 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
 
-<details>
-<summary><strong>📋 Table of Contents</strong></summary>
-
-- [Bashing Logs](#bashing-logs)
-- [logging.lib.sh](#logginglibsh)
-  - [Features](#features)
-  - [Quick Start](#quick-start)
-  - [Installation](#installation)
-    - [Requirements](#requirements)
-  - [API Reference](#api-reference)
-    - [Core Logging Functions](#core-logging-functions)
-      - [`logging::log_info MESSAGE`](#logginglog_info-message)
-      - [`logging::log_warn MESSAGE`](#logginglog_warn-message)
-      - [`logging::log_error MESSAGE`](#logginglog_error-message)
-      - [`logging::log_fatal MESSAGE`](#logginglog_fatal-message)
-    - [Initialization](#initialization)
-      - [`logging::init SCRIPT_NAME`](#logginginit-script_name)
-    - [Advanced Functions](#advanced-functions)
-      - [`logging::add_err_trap`](#loggingadd_err_trap)
-      - [`logging::add_exit_trap`](#loggingadd_exit_trap)
-      - [`logging::setup_traps`](#loggingsetup_traps)
-  - [The Trap Chaining Magic](#the-trap-chaining-magic)
-    - [The Problem](#the-problem)
-    - [The Solution](#the-solution)
-  - [Zero-Setup Error Diagnostics](#zero-setup-error-diagnostics)
-  - [Best Practices](#best-practices)
-    - [1. Initialize Early](#1-initialize-early)
-    - [2. Use Appropriate Log Levels](#2-use-appropriate-log-levels)
-    - [3. Leverage Automatic Error Tracing](#3-leverage-automatic-error-tracing)
-    - [4. Script Name Context](#4-script-name-context)
-  - [Log Format](#log-format)
-  - [Technical Implementation Details](#technical-implementation-details)
-    - [Shell Detection](#shell-detection)
-    - [Source-Only Execution](#source-only-execution)
-    - [Strict Mode Compatible](#strict-mode-compatible)
-  - [Examples](#examples)
-    - [CI Pipeline Script](#ci-pipeline-script)
-    - [Error Recovery Script](#error-recovery-script)
-    - [Multi-Script Coordination](#multi-script-coordination)
-  - [Contributing](#contributing)
-  - [License](#license)
-  - [Credits](#credits)
-
-</details>
-
-# logging.lib.sh
-
 A robust, production-ready logging utility library for Bash scripts with automatic error tracing, safe trap chaining, and zero-setup crash diagnostics.
 
 ## Features
