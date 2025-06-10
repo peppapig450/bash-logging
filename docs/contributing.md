@@ -17,7 +17,7 @@ Thank you for your interest in contributing to Bashing Logs! This document provi
 1. **Fork and clone the repository:**
 
    ```bash
-   git clone https://github.com/yourusername/bashing-logs.git
+   git clone https://github.com/peppapig450/bashing-logs.git
    cd bashing-logs
    ```
 
@@ -26,15 +26,10 @@ Thank you for your interest in contributing to Bashing Logs! This document provi
    ```bash
    # Install ShellCheck
    # Ubuntu/Debian
-   sudo apt-get install shellcheck
+   sudo apt-get install shellcheck shfmt bats
    
    # macOS
-   brew install shellcheck
-   
-   # Install Bats (optional)
-   git clone https://github.com/bats-core/bats-core.git
-   cd bats-core
-   ./install.sh /usr/local
+   brew install shellcheck shfmt bats
    ```
 
 3. **Verify setup:**
@@ -371,23 +366,7 @@ Follow semantic versioning:
 ### Communication Channels
 
 - **GitHub Issues:** Bug reports and feature requests
-- **GitHub Discussions:** Questions and general discussion
 - **Pull Request Reviews:** Code-specific feedback
-
-### Code Review Process
-
-All contributions go through code review:
-
-1. **Automated checks:** ShellCheck, basic tests
-2. **Maintainer review:** Code quality, design, documentation
-3. **Community feedback:** Other contributors may provide input
-4. **Approval and merge:** Once all feedback is addressed
-
-### Response Times
-
-- **Initial response:** Within 48 hours
-- **Review completion:** Within 1 week for small changes
-- **Complex features:** May require multiple review cycles
 
 ---
 
