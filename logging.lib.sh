@@ -21,7 +21,8 @@
 #
 # This file is intended to be sourced, not executed.
 # ==============================================================================
-set -Eeuo pipefail
+# Start with posix compliant shell options
+set -eu
 
 # Bail if we're not being sourced
 (return 0 2> /dev/null) || {
@@ -46,6 +47,9 @@ if [ -z "${BASH_VERSION-}" ]; then
     "${shell}" >&2
   return 1
 fi
+
+# Now that we know we're in Bash, enable Bash only shell options
+set -Eo pipefail
 
 # logging::log LEVEL MESSAGE
 # Logs a message to stderr with UTC timestamp and color-coded level.
