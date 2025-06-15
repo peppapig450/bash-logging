@@ -1,6 +1,6 @@
 # Bashing Logs
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/peppapig450/bashing-logs/blob/main/LICENSE)
 
 A robust, production-ready logging utility library for Bash scripts with automatic error tracing, safe trap chaining, and zero-setup crash diagnostics.
 
@@ -86,4 +86,4 @@ Perfect for:
 
 ---
 
-**Need help?** Check the [documentation](.) or [open an issue](https://github.com/peppapig450/bashing-logs/issues).
+**Need help?** Check the [documentation](index.md) or [open an issue](https://github.com/peppapig450/bashing-logs/issues).
