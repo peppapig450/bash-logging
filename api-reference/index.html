@@ -1,0 +1,1300 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../advanced-features/">
+      
+      
+        <link rel="next" href="../contributing/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>API Reference - Bashing Logs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#api-reference" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Bashing Logs" class="md-header__button md-logo" aria-label="Bashing Logs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Bashing Logs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              API Reference
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Bashing Logs" class="md-nav__button md-logo" aria-label="Bashing Logs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Bashing Logs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Bashing Logs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../advanced-features/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Advanced Features
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    API Reference
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    API Reference
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#core-logging-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Core Logging Functions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core Logging Functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#logginglog_info-message" class="md-nav__link">
+    <span class="md-ellipsis">
+      logging::log_info MESSAGE
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logginglog_warn-message" class="md-nav__link">
+    <span class="md-ellipsis">
+      logging::log_warn MESSAGE
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logginglog_error-message" class="md-nav__link">
+    <span class="md-ellipsis">
+      logging::log_error MESSAGE
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logginglog_fatal-message" class="md-nav__link">
+    <span class="md-ellipsis">
+      logging::log_fatal MESSAGE
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#initialization-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Initialization Functions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Initialization Functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#logginginit-script_name" class="md-nav__link">
+    <span class="md-ellipsis">
+      logging::init SCRIPT_NAME
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced-trap-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced Trap Functions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Advanced Trap Functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#loggingadd_err_trap" class="md-nav__link">
+    <span class="md-ellipsis">
+      logging::add_err_trap
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loggingadd_exit_trap" class="md-nav__link">
+    <span class="md-ellipsis">
+      logging::add_exit_trap
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loggingsetup_traps" class="md-nav__link">
+    <span class="md-ellipsis">
+      logging::setup_traps
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#internal-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Internal Functions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Internal Functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#logginglog-level-message" class="md-nav__link">
+    <span class="md-ellipsis">
+      logging::log LEVEL MESSAGE
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loggingtrap_err_handler" class="md-nav__link">
+    <span class="md-ellipsis">
+      logging::trap_err_handler
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loggingcleanup" class="md-nav__link">
+    <span class="md-ellipsis">
+      logging::cleanup
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#global-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Global Variables
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Global Variables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#logging_script_name" class="md-nav__link">
+    <span class="md-ellipsis">
+      LOGGING_SCRIPT_NAME
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#function-naming-convention" class="md-nav__link">
+    <span class="md-ellipsis">
+      Function Naming Convention
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#error-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Error Handling
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Error Handling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#return-codes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Return Codes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-scenarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Error Scenarios
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output-specifications" class="md-nav__link">
+    <span class="md-ellipsis">
+      Output Specifications
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Output Specifications">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#timestamp-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      Timestamp Format
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#color-codes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Color Codes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#output-destination" class="md-nav__link">
+    <span class="md-ellipsis">
+      Output Destination
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#thread-safety" class="md-nav__link">
+    <span class="md-ellipsis">
+      Thread Safety
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#performance-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Performance Considerations
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contributing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Contributing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../examples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Examples
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Getting started
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#core-logging-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Core Logging Functions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core Logging Functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#logginglog_info-message" class="md-nav__link">
+    <span class="md-ellipsis">
+      logging::log_info MESSAGE
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logginglog_warn-message" class="md-nav__link">
+    <span class="md-ellipsis">
+      logging::log_warn MESSAGE
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logginglog_error-message" class="md-nav__link">
+    <span class="md-ellipsis">
+      logging::log_error MESSAGE
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logginglog_fatal-message" class="md-nav__link">
+    <span class="md-ellipsis">
+      logging::log_fatal MESSAGE
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#initialization-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Initialization Functions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Initialization Functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#logginginit-script_name" class="md-nav__link">
+    <span class="md-ellipsis">
+      logging::init SCRIPT_NAME
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced-trap-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced Trap Functions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Advanced Trap Functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#loggingadd_err_trap" class="md-nav__link">
+    <span class="md-ellipsis">
+      logging::add_err_trap
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loggingadd_exit_trap" class="md-nav__link">
+    <span class="md-ellipsis">
+      logging::add_exit_trap
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loggingsetup_traps" class="md-nav__link">
+    <span class="md-ellipsis">
+      logging::setup_traps
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#internal-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Internal Functions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Internal Functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#logginglog-level-message" class="md-nav__link">
+    <span class="md-ellipsis">
+      logging::log LEVEL MESSAGE
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loggingtrap_err_handler" class="md-nav__link">
+    <span class="md-ellipsis">
+      logging::trap_err_handler
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loggingcleanup" class="md-nav__link">
+    <span class="md-ellipsis">
+      logging::cleanup
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#global-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Global Variables
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Global Variables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#logging_script_name" class="md-nav__link">
+    <span class="md-ellipsis">
+      LOGGING_SCRIPT_NAME
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#function-naming-convention" class="md-nav__link">
+    <span class="md-ellipsis">
+      Function Naming Convention
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#error-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Error Handling
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Error Handling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#return-codes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Return Codes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-scenarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Error Scenarios
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output-specifications" class="md-nav__link">
+    <span class="md-ellipsis">
+      Output Specifications
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Output Specifications">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#timestamp-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      Timestamp Format
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#color-codes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Color Codes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#output-destination" class="md-nav__link">
+    <span class="md-ellipsis">
+      Output Destination
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#thread-safety" class="md-nav__link">
+    <span class="md-ellipsis">
+      Thread Safety
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#performance-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Performance Considerations
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="api-reference">API Reference</h1>
+<p>Complete documentation for all functions provided by the Bashing Logs library.</p>
+<h2 id="core-logging-functions">Core Logging Functions</h2>
+<h3 id="logginglog_info-message"><code>logging::log_info MESSAGE</code></h3>
+<p>Logs an informational message with green color coding.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>MESSAGE</code>: The message to log (can contain spaces)</li>
+</ul>
+<p><strong>Example:</strong></p>
+<pre><code class="language-bash">logging::log_info &quot;Database connection established&quot;
+logging::log_info &quot;Processing file: $filename&quot;
+</code></pre>
+<p><strong>Output:</strong></p>
+<pre><code class="language-text">[2025-06-10T04:24:11Z][INFO][script.sh] Database connection established
+</code></pre>
+<hr />
+<h3 id="logginglog_warn-message"><code>logging::log_warn MESSAGE</code></h3>
+<p>Logs a warning message with yellow color coding.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>MESSAGE</code>: The warning message to log</li>
+</ul>
+<p><strong>Example:</strong></p>
+<pre><code class="language-bash">logging::log_warn &quot;Configuration file not found, using defaults&quot;
+logging::log_warn &quot;API rate limit approaching: $remaining_calls remaining&quot;
+</code></pre>
+<p><strong>Output:</strong></p>
+<pre><code class="language-text">[2025-06-10T04:24:11Z][WARN][script.sh] Configuration file not found, using defaults
+</code></pre>
+<hr />
+<h3 id="logginglog_error-message"><code>logging::log_error MESSAGE</code></h3>
+<p>Logs an error message with red color coding. Does not exit the script.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>MESSAGE</code>: The error message to log</li>
+</ul>
+<p><strong>Example:</strong></p>
+<pre><code class="language-bash">logging::log_error &quot;Failed to connect to database after 3 attempts&quot;
+logging::log_error &quot;Invalid configuration in section: $section_name&quot;
+</code></pre>
+<p><strong>Output:</strong></p>
+<pre><code class="language-text">[2025-06-10T04:24:11Z][ERROR][script.sh] Failed to connect to database after 3 attempts
+</code></pre>
+<hr />
+<h3 id="logginglog_fatal-message"><code>logging::log_fatal MESSAGE</code></h3>
+<p>Logs an error message with red color coding and exits the script with status 1.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>MESSAGE</code>: The fatal error message to log</li>
+</ul>
+<p><strong>Example:</strong></p>
+<pre><code class="language-bash">logging::log_fatal &quot;Critical dependency missing: $required_tool&quot;
+logging::log_fatal &quot;Unable to acquire exclusive lock&quot;
+</code></pre>
+<p><strong>Output:</strong></p>
+<pre><code class="language-text">[2025-06-10T04:24:11Z][ERROR][script.sh] Critical dependency missing: docker
+</code></pre>
+<p><strong>Note:</strong> The script will exit immediately after logging.</p>
+<hr />
+<h2 id="initialization-functions">Initialization Functions</h2>
+<h3 id="logginginit-script_name"><code>logging::init SCRIPT_NAME</code></h3>
+<p>Initializes the logging system with automatic error trapping and cleanup.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>SCRIPT_NAME</code>: Name to use in log prefixes (typically <code>$0</code>)</li>
+</ul>
+<p><strong>Behavior:</strong></p>
+<ul>
+<li>Sets the global <code>LOGGING_SCRIPT_NAME</code> variable</li>
+<li>Installs error trap handler for automatic crash diagnostics</li>
+<li>Sets up cleanup handler for script exit</li>
+<li>Safely chains with any existing ERR/EXIT traps</li>
+</ul>
+<p><strong>Example:</strong></p>
+<pre><code class="language-bash">#!/usr/bin/env bash
+source ./logging.lib.sh
+
+# Initialize logging (recommended as early as possible)
+logging::init &quot;$0&quot;
+
+# Now any command failure will be automatically logged
+false  # This will trigger the error trap
+</code></pre>
+<p><strong>Output:</strong></p>
+<pre><code class="language-text">[2025-06-10T04:24:11Z][ERROR][script.sh] Unexpected fatal error in script.sh on line 7: false
+</code></pre>
+<hr />
+<h2 id="advanced-trap-functions">Advanced Trap Functions</h2>
+<h3 id="loggingadd_err_trap"><code>logging::add_err_trap</code></h3>
+<p>Manually adds the error trap handler without full initialization.</p>
+<p><strong>Use Case:</strong> When you want error trapping but not the full initialization (e.g., in libraries or when you need custom setup).</p>
+<p><strong>Example:</strong></p>
+<pre><code class="language-bash"># Add only error trapping
+logging::add_err_trap
+
+# Set script name manually if desired
+LOGGING_SCRIPT_NAME=&quot;custom-name&quot;
+</code></pre>
+<p><strong>Note:</strong> Called automatically by <code>logging::init</code>.</p>
+<hr />
+<h3 id="loggingadd_exit_trap"><code>logging::add_exit_trap</code></h3>
+<p>Manually adds the cleanup handler for script exit.</p>
+<p><strong>Use Case:</strong> When you need custom cleanup behavior or want to add cleanup without error trapping.</p>
+<p><strong>Example:</strong></p>
+<pre><code class="language-bash"># Add only exit cleanup
+logging::add_exit_trap
+</code></pre>
+<p><strong>Note:</strong> Called automatically by <code>logging::init</code>.</p>
+<hr />
+<h3 id="loggingsetup_traps"><code>logging::setup_traps</code></h3>
+<p>Sets up both ERR and EXIT traps. Equivalent to calling both <code>logging::add_err_trap</code> and <code>logging::add_exit_trap</code>.</p>
+<p><strong>Example:</strong></p>
+<pre><code class="language-bash"># Manual trap setup (without setting script name)
+logging::setup_traps
+</code></pre>
+<p><strong>Note:</strong> Called automatically by <code>logging::init</code>.</p>
+<hr />
+<h2 id="internal-functions">Internal Functions</h2>
+<p>These functions are used internally but may be useful for advanced use cases.</p>
+<h3 id="logginglog-level-message"><code>logging::log LEVEL MESSAGE</code></h3>
+<p>Internal function used by all logging functions. Handles timestamp generation, color coding, and formatting.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>LEVEL</code>: Log level (INFO, WARN, ERROR)</li>
+<li><code>MESSAGE</code>: Message to log</li>
+</ul>
+<p><strong>Example:</strong></p>
+<pre><code class="language-bash"># Generally you should use the specific functions instead
+logging::log INFO &quot;This is equivalent to logging::log_info&quot;
+logging::log WARN &quot;This is equivalent to logging::log_warn&quot;
+</code></pre>
+<hr />
+<h3 id="loggingtrap_err_handler"><code>logging::trap_err_handler</code></h3>
+<p>The actual error trap handler function. Logs fatal errors with context and exits.</p>
+<p><strong>Use Case:</strong> Advanced trap customization.</p>
+<p><strong>Example:</strong></p>
+<pre><code class="language-bash"># Custom trap that does additional cleanup
+trap 'cleanup_function; logging::trap_err_handler' ERR
+</code></pre>
+<hr />
+<h3 id="loggingcleanup"><code>logging::cleanup</code></h3>
+<p>Cleanup function that unsets global logging state.</p>
+<p><strong>Use Case:</strong> Manual cleanup or custom exit handling.</p>
+<p><strong>Example:</strong></p>
+<pre><code class="language-bash"># Manual cleanup
+logging::cleanup
+</code></pre>
+<hr />
+<h2 id="global-variables">Global Variables</h2>
+<h3 id="logging_script_name"><code>LOGGING_SCRIPT_NAME</code></h3>
+<p>Global variable that stores the script name for log prefixing.</p>
+<p><strong>Set by:</strong> <code>logging::init</code>
+<strong>Type:</strong> String
+<strong>Scope:</strong> Global export</p>
+<p><strong>Example:</strong></p>
+<pre><code class="language-bash"># Set automatically
+logging::init &quot;$0&quot;
+echo &quot;Script name: $LOGGING_SCRIPT_NAME&quot;
+
+# Or set manually
+LOGGING_SCRIPT_NAME=&quot;my-custom-script&quot;
+logging::log_info &quot;This will show [my-custom-script] in the log&quot;
+</code></pre>
+<hr />
+<h2 id="function-naming-convention">Function Naming Convention</h2>
+<p>All functions follow the <code>namespace::function</code> convention from the Google Shell Style Guide:</p>
+<ul>
+<li><strong>Namespace:</strong> <code>logging::</code></li>
+<li><strong>Purpose:</strong> Prevents naming conflicts with other libraries</li>
+<li><strong>Consistency:</strong> All functions are prefixed, making them easy to identify</li>
+</ul>
+<hr />
+<h2 id="error-handling">Error Handling</h2>
+<h3 id="return-codes">Return Codes</h3>
+<ul>
+<li><strong>Logging functions:</strong> Always return 0 (success)</li>
+<li><strong><code>logging::log_fatal</code>:</strong> Exits with code 1</li>
+<li><strong><code>logging::init</code>:</strong> Returns 1 if called with wrong number of arguments</li>
+</ul>
+<h3 id="error-scenarios">Error Scenarios</h3>
+<p><strong>Invalid log level:</strong></p>
+<pre><code class="language-bash">logging::log INVALID &quot;message&quot;  # Will exit with error
+</code></pre>
+<p><strong>Missing arguments:</strong></p>
+<pre><code class="language-bash">logging::init  # Returns 1 and logs warning
+</code></pre>
+<p><strong>Shell compatibility:</strong></p>
+<pre><code class="language-bash"># If not running in Bash, library will fail to load
+#!/bin/sh
+source ./logging.lib.sh  # Will exit with error message
+</code></pre>
+<hr />
+<h2 id="output-specifications">Output Specifications</h2>
+<h3 id="timestamp-format">Timestamp Format</h3>
+<ul>
+<li><strong>Format:</strong> ISO 8601/RFC3339 UTC (<code>YYYY-MM-DDTHH:MM:SSZ</code>)</li>
+<li><strong>Timezone:</strong> Always UTC for consistency across systems</li>
+<li><strong>Example:</strong> <code>2025-06-10T04:24:11Z</code></li>
+</ul>
+<h3 id="color-codes">Color Codes</h3>
+<p>When outputting to a terminal:</p>
+<ul>
+<li><strong>INFO:</strong> <code>\033[0;32m</code> (green)</li>
+<li><strong>WARN:</strong> <code>\033[0;33m</code> (yellow)  </li>
+<li><strong>ERROR:</strong> <code>\033[0;31m</code> (red)</li>
+<li><strong>Reset:</strong> <code>\033[0m</code></li>
+</ul>
+<p>Colors are automatically disabled when:</p>
+<ul>
+<li>Output is redirected to a file</li>
+<li>Terminal doesn't support colors</li>
+<li>Running in non-interactive mode</li>
+</ul>
+<h3 id="output-destination">Output Destination</h3>
+<p>All logging output goes to <strong>stderr</strong> (file descriptor 2), following Unix conventions for diagnostic output.</p>
+<hr />
+<h2 id="thread-safety">Thread Safety</h2>
+<p>The logging functions are <strong>not</strong> thread-safe. If using in multi-process environments:</p>
+<ul>
+<li>Each process will have its own logging state</li>
+<li>Multiple processes writing to the same log file may interleave output</li>
+<li>Consider using process-specific log files or external log aggregation</li>
+</ul>
+<hr />
+<h2 id="performance-considerations">Performance Considerations</h2>
+<ul>
+<li><strong>Timestamp generation:</strong> Calls <code>date</code> command for each log entry</li>
+<li><strong>Color detection:</strong> Minimal overhead, cached per session</li>
+<li><strong>Script name resolution:</strong> Done once during initialization</li>
+<li><strong>Trap parsing:</strong> Uses Perl, minimal overhead during setup</li>
+</ul>
+<p>For high-frequency logging, consider buffering messages or using dedicated logging solutions.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+    
+  </body>
+</html>
