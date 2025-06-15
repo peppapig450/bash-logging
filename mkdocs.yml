@@ -4,13 +4,22 @@ theme:
   name: material
   palette:
     - scheme: default
+      primary: blue
+      accent: indigo
       toggle:
         icon: material/weather-sunny
         name: Switch to dark mode
 
     - scheme: slate
+      primary: blue
+      accent: indigo
       toggle:
         icon: material/weather-night
         name: Switch to light mode
 
 docs_dir: docs
+
+markdown_extensions:
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
