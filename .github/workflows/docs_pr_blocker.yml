@@ -1,0 +1,13 @@
+name: Block docs-to-main PRs
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  docs-pr-blocker:
+    if: github.head_ref == 'docs'
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          printf "PRs from 'docs' to 'main' are NOT allowed.\n" 
+          exit 1
