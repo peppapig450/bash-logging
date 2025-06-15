@@ -63,7 +63,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -121,7 +121,7 @@
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
     
       <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
@@ -131,7 +131,7 @@
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
     
       <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
@@ -1312,72 +1312,72 @@
 <ol>
 <li><strong>Fork and clone the repository:</strong></li>
 </ol>
-<p><code>bash
-   git clone https://github.com/peppapig450/bashing-logs.git
-   cd bashing-logs</code></p>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/peppapig450/bashing-logs.git
+<span class="nb">cd</span><span class="w"> </span>bashing-logs
+</code></pre></div>
 <ol>
 <li><strong>Install development tools:</strong></li>
 </ol>
-<p>```bash
-   # Install ShellCheck
-   # Ubuntu/Debian
-   sudo apt-get install shellcheck shfmt bats</p>
-<p># macOS
-   brew install shellcheck shfmt bats
-   ```</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Install ShellCheck</span>
+<span class="c1"># Ubuntu/Debian</span>
+sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>shellcheck<span class="w"> </span>shfmt<span class="w"> </span>bats
+
+<span class="c1"># macOS</span>
+brew<span class="w"> </span>install<span class="w"> </span>shellcheck<span class="w"> </span>shfmt<span class="w"> </span>bats
+</code></pre></div>
 <ol>
 <li><strong>Verify setup:</strong></li>
 </ol>
-<p>```bash
-   # Test the library
-   bash -c "source ./logging.lib.sh; logging::log_info 'Test message'"</p>
-<p># Run ShellCheck
-   shellcheck logging.lib.sh
-   ```</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Test the library</span>
+bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;source ./logging.lib.sh; logging::log_info &#39;Test message&#39;&quot;</span>
+
+<span class="c1"># Run ShellCheck</span>
+shellcheck<span class="w"> </span>logging.lib.sh
+</code></pre></div>
 <hr />
 <h2 id="code-standards">Code Standards</h2>
 <h3 id="shell-style-guide">Shell Style Guide</h3>
 <p>This project follows the <a href="https://google.github.io/styleguide/shellguide.html">Google Shell Style Guide</a> with these specific conventions:</p>
 <h4 id="function-naming">Function Naming</h4>
 <p>All functions must use the <code>namespace::function</code> convention:</p>
-<pre><code class="language-bash"># ✓ Correct
-logging::log_info() { ... }
-logging::init() { ... }
+<div class="highlight"><pre><span></span><code><span class="c1"># ✓ Correct</span>
+logging::log_info<span class="o">()</span><span class="w"> </span><span class="o">{</span><span class="w"> </span>...<span class="w"> </span><span class="o">}</span>
+logging::init<span class="o">()</span><span class="w"> </span><span class="o">{</span><span class="w"> </span>...<span class="w"> </span><span class="o">}</span>
 
-# ✗ Incorrect
-log_info() { ... }
-init_logging() { ... }
-</code></pre>
+<span class="c1"># ✗ Incorrect</span>
+log_info<span class="o">()</span><span class="w"> </span><span class="o">{</span><span class="w"> </span>...<span class="w"> </span><span class="o">}</span>
+init_logging<span class="o">()</span><span class="w"> </span><span class="o">{</span><span class="w"> </span>...<span class="w"> </span><span class="o">}</span>
+</code></pre></div>
 <h4 id="variable-naming">Variable Naming</h4>
 <ul>
 <li><strong>Global variables:</strong> <code>UPPER_CASE</code> with namespace prefix when appropriate</li>
 <li><strong>Local variables:</strong> <code>lower_case</code></li>
 <li><strong>Constants:</strong> <code>readonly UPPER_CASE</code></li>
 </ul>
-<pre><code class="language-bash"># Global variables
-declare -g LOGGING_SCRIPT_NAME
-readonly LOGGING_VERSION=&quot;1.0.0&quot;
+<div class="highlight"><pre><span></span><code><span class="c1"># Global variables</span>
+<span class="nb">declare</span><span class="w"> </span>-g<span class="w"> </span>LOGGING_SCRIPT_NAME
+<span class="nb">readonly</span><span class="w"> </span><span class="nv">LOGGING_VERSION</span><span class="o">=</span><span class="s2">&quot;1.0.0&quot;</span>
 
-# Local variables
-logging::init() {
-    local script_name=&quot;$1&quot;
-    local config_file=&quot;config.yml&quot;
-}
-</code></pre>
+<span class="c1"># Local variables</span>
+logging::init<span class="o">()</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span><span class="nb">local</span><span class="w"> </span><span class="nv">script_name</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$1</span><span class="s2">&quot;</span>
+<span class="w">    </span><span class="nb">local</span><span class="w"> </span><span class="nv">config_file</span><span class="o">=</span><span class="s2">&quot;config.yml&quot;</span>
+<span class="o">}</span>
+</code></pre></div>
 <h4 id="error-handling">Error Handling</h4>
 <ul>
 <li>Always use <code>set -Eeuo pipefail</code> for strict error handling</li>
 <li>Provide meaningful error messages</li>
 <li>Use appropriate exit codes</li>
 </ul>
-<pre><code class="language-bash"># ✓ Good error handling
-if [[ ! -f &quot;$config_file&quot; ]]; then
-    logging::log_fatal &quot;Configuration file not found: $config_file&quot;
-fi
+<div class="highlight"><pre><span></span><code><span class="c1"># ✓ Good error handling</span>
+<span class="k">if</span><span class="w"> </span><span class="o">[[</span><span class="w"> </span>!<span class="w"> </span>-f<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$config_file</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">]]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">    </span>logging::log_fatal<span class="w"> </span><span class="s2">&quot;Configuration file not found: </span><span class="nv">$config_file</span><span class="s2">&quot;</span>
+<span class="k">fi</span>
 
-# ✗ Poor error handling
-[[ -f &quot;$config_file&quot; ]] || exit 1
-</code></pre>
+<span class="c1"># ✗ Poor error handling</span>
+<span class="o">[[</span><span class="w"> </span>-f<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$config_file</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">]]</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nb">exit</span><span class="w"> </span><span class="m">1</span>
+</code></pre></div>
 <h3 id="code-formatting">Code Formatting</h3>
 <h4 id="indentation-and-spacing">Indentation and Spacing</h4>
 <ul>
@@ -1385,97 +1385,97 @@ fi
 <li><strong>Line length:</strong> Maximum 80 characters where practical</li>
 <li><strong>Function spacing:</strong> One blank line between functions</li>
 </ul>
-<pre><code class="language-bash"># ✓ Correct formatting
-logging::log_info() {
-  local message=&quot;$*&quot;
-  logging::log INFO &quot;$message&quot;
-}
+<div class="highlight"><pre><span></span><code><span class="c1"># ✓ Correct formatting</span>
+logging::log_info<span class="o">()</span><span class="w"> </span><span class="o">{</span>
+<span class="w">  </span><span class="nb">local</span><span class="w"> </span><span class="nv">message</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$*</span><span class="s2">&quot;</span>
+<span class="w">  </span>logging::log<span class="w"> </span>INFO<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$message</span><span class="s2">&quot;</span>
+<span class="o">}</span>
 
-logging::log_warn() {
-  local message=&quot;$*&quot;
-  logging::log WARN &quot;$message&quot;
-}
-</code></pre>
+logging::log_warn<span class="o">()</span><span class="w"> </span><span class="o">{</span>
+<span class="w">  </span><span class="nb">local</span><span class="w"> </span><span class="nv">message</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$*</span><span class="s2">&quot;</span>
+<span class="w">  </span>logging::log<span class="w"> </span>WARN<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$message</span><span class="s2">&quot;</span>
+<span class="o">}</span>
+</code></pre></div>
 <h4 id="quoting">Quoting</h4>
 <ul>
 <li>Quote variables to prevent word splitting: <code>"$variable"</code></li>
 <li>Use single quotes for literal strings: <code>'literal text'</code></li>
 <li>Use <code>$()</code> for command substitution, not backticks</li>
 </ul>
-<pre><code class="language-bash"># ✓ Correct quoting
-local timestamp=&quot;$(date -u +&quot;%Y-%m-%dT%H:%M:%SZ&quot;)&quot;
-local message=&quot;Processing file: $filename&quot;
+<div class="highlight"><pre><span></span><code><span class="c1"># ✓ Correct quoting</span>
+<span class="nb">local</span><span class="w"> </span><span class="nv">timestamp</span><span class="o">=</span><span class="s2">&quot;</span><span class="k">$(</span>date<span class="w"> </span>-u<span class="w"> </span>+<span class="s2">&quot;%Y-%m-%dT%H:%M:%SZ&quot;</span><span class="k">)</span><span class="s2">&quot;</span>
+<span class="nb">local</span><span class="w"> </span><span class="nv">message</span><span class="o">=</span><span class="s2">&quot;Processing file: </span><span class="nv">$filename</span><span class="s2">&quot;</span>
 
-# ✗ Incorrect quoting
-local timestamp=`date -u +%Y-%m-%dT%H:%M:%SZ`
-local message=Processing file: $filename
-</code></pre>
+<span class="c1"># ✗ Incorrect quoting</span>
+<span class="nb">local</span><span class="w"> </span><span class="nv">timestamp</span><span class="o">=</span><span class="sb">`</span>date<span class="w"> </span>-u<span class="w"> </span>+%Y-%m-%dT%H:%M:%SZ<span class="sb">`</span>
+<span class="nb">local</span><span class="w"> </span><span class="nv">message</span><span class="o">=</span>Processing<span class="w"> </span>file:<span class="w"> </span><span class="nv">$filename</span>
+</code></pre></div>
 <h3 id="documentation-standards">Documentation Standards</h3>
 <h4 id="function-documentation">Function Documentation</h4>
 <p>All public functions must include documentation:</p>
-<pre><code class="language-bash"># logging::init SCRIPT_NAME
-# Initializes the logging system with automatic error trapping.
-#
-# Sets the global LOGGING_SCRIPT_NAME variable and installs
-# error handlers for comprehensive crash diagnostics.
-#
-# Arguments:
-#   SCRIPT_NAME - Name to use in log prefixes (typically $0)
-#
-# Usage:
-#   logging::init &quot;$0&quot;
-logging::init() {
-    # Implementation...
-}
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="c1"># logging::init SCRIPT_NAME</span>
+<span class="c1"># Initializes the logging system with automatic error trapping.</span>
+<span class="c1">#</span>
+<span class="c1"># Sets the global LOGGING_SCRIPT_NAME variable and installs</span>
+<span class="c1"># error handlers for comprehensive crash diagnostics.</span>
+<span class="c1">#</span>
+<span class="c1"># Arguments:</span>
+<span class="c1">#   SCRIPT_NAME - Name to use in log prefixes (typically $0)</span>
+<span class="c1">#</span>
+<span class="c1"># Usage:</span>
+<span class="c1">#   logging::init &quot;$0&quot;</span>
+logging::init<span class="o">()</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span><span class="c1"># Implementation...</span>
+<span class="o">}</span>
+</code></pre></div>
 <h4 id="comment-style">Comment Style</h4>
 <ul>
 <li>Use <code>#</code> for single-line comments</li>
 <li>Use <code># ===</code> for section headers</li>
 <li>Explain complex logic and non-obvious decisions</li>
 </ul>
-<pre><code class="language-bash"># ==============================================================================
-# Trap handling functions
-# ==============================================================================
+<div class="highlight"><pre><span></span><code><span class="c1"># ==============================================================================</span>
+<span class="c1"># Trap handling functions</span>
+<span class="c1"># ==============================================================================</span>
 
-# Extract existing ERR trap command using Perl for safe parsing.
-# We use Perl because shell quoting rules are complex and error-prone
-# when parsing trap output that may contain special characters.
-existing=&quot;$(perl -lne '...' &lt;&lt;&lt; &quot;$(trap -p ERR)&quot; || true)&quot;
-</code></pre>
+<span class="c1"># Extract existing ERR trap command using Perl for safe parsing.</span>
+<span class="c1"># We use Perl because shell quoting rules are complex and error-prone</span>
+<span class="c1"># when parsing trap output that may contain special characters.</span>
+<span class="nv">existing</span><span class="o">=</span><span class="s2">&quot;</span><span class="k">$(</span>perl<span class="w"> </span>-lne<span class="w"> </span><span class="s1">&#39;...&#39;</span><span class="w"> </span><span class="o">&lt;&lt;&lt;</span><span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span><span class="nb">trap</span><span class="w"> </span>-p<span class="w"> </span>ERR<span class="k">)</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nb">true</span><span class="k">)</span><span class="s2">&quot;</span>
+</code></pre></div>
 <hr />
 <h2 id="testing-guidelines">Testing Guidelines</h2>
 <h3 id="manual-testing">Manual Testing</h3>
 <p>Before submitting changes, test your modifications:</p>
-<pre><code class="language-bash"># Create test script
-cat &gt; test_changes.sh &lt;&lt; 'EOF'
-#!/usr/bin/env bash
-set -Eeuo pipefail
+<div class="highlight"><pre><span></span><code><span class="c1"># Create test script</span>
+cat<span class="w"> </span>&gt;<span class="w"> </span>test_changes.sh<span class="w"> </span><span class="s">&lt;&lt; &#39;EOF&#39;</span>
+<span class="s">#!/usr/bin/env bash</span>
+<span class="s">set -Eeuo pipefail</span>
 
-source ./logging.lib.sh
-logging::init &quot;$0&quot;
+<span class="s">source ./logging.lib.sh</span>
+<span class="s">logging::init &quot;$0&quot;</span>
 
-# Test basic logging
-logging::log_info &quot;Testing info message&quot;
-logging::log_warn &quot;Testing warning message&quot;
-logging::log_error &quot;Testing error message&quot;
+<span class="s"># Test basic logging</span>
+<span class="s">logging::log_info &quot;Testing info message&quot;</span>
+<span class="s">logging::log_warn &quot;Testing warning message&quot;</span>
+<span class="s">logging::log_error &quot;Testing error message&quot;</span>
 
-# Test error trapping
-echo &quot;About to trigger error trap...&quot;
-false  # This should be caught and logged
-EOF
+<span class="s"># Test error trapping</span>
+<span class="s">echo &quot;About to trigger error trap...&quot;</span>
+<span class="s">false  # This should be caught and logged</span>
+<span class="s">EOF</span>
 
-chmod +x test_changes.sh
+chmod<span class="w"> </span>+x<span class="w"> </span>test_changes.sh
 ./test_changes.sh
-</code></pre>
+</code></pre></div>
 <h3 id="automated-testing">Automated Testing</h3>
 <p>If you have Bats installed, run the test suite:</p>
-<pre><code class="language-bash"># Run all tests
-bats tests/
+<div class="highlight"><pre><span></span><code><span class="c1"># Run all tests</span>
+bats<span class="w"> </span>tests/
 
-# Run specific test file
-bats tests/logging_test.bats
-</code></pre>
+<span class="c1"># Run specific test file</span>
+bats<span class="w"> </span>tests/logging_test.bats
+</code></pre></div>
 <h3 id="testing-checklist">Testing Checklist</h3>
 <ul>
 <li>[ ] All log levels work correctly</li>
@@ -1500,21 +1500,21 @@ bats tests/logging_test.bats
 </ul>
 <h3 id="2-branch-naming">2. Branch Naming</h3>
 <p>Use descriptive branch names:</p>
-<pre><code class="language-bash"># Feature branches
-git checkout -b feature/add-debug-level
-git checkout -b feature/json-output-format
+<div class="highlight"><pre><span></span><code><span class="c1"># Feature branches</span>
+git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>feature/add-debug-level
+git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>feature/json-output-format
 
-# Bug fixes
-git checkout -b fix/trap-chaining-quotes
-git checkout -b fix/color-detection-ci
+<span class="c1"># Bug fixes</span>
+git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>fix/trap-chaining-quotes
+git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>fix/color-detection-ci
 
-# Documentation
-git checkout -b docs/api-reference-update
-git checkout -b docs/examples-expansion
-</code></pre>
+<span class="c1"># Documentation</span>
+git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>docs/api-reference-update
+git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>docs/examples-expansion
+</code></pre></div>
 <h3 id="3-commit-messages">3. Commit Messages</h3>
 <p>Follow conventional commit format:</p>
-<pre><code>type(scope): description
+<div class="highlight"><pre><span></span><code>type(scope): description
 
 - feat: new features
 - fix: bug fixes
@@ -1528,7 +1528,7 @@ Examples:
 feat(logging): add support for custom log levels
 fix(traps): handle complex quoting in existing traps
 docs(examples): add CI/CD pipeline examples
-</code></pre>
+</code></pre></div>
 <h3 id="4-pull-request-process">4. Pull Request Process</h3>
 <ol>
 <li><strong>Update documentation</strong> if you've changed functionality</li>
@@ -1539,26 +1539,26 @@ docs(examples): add CI/CD pipeline examples
 </ol>
 <h4 id="pull-request-template">Pull Request Template</h4>
 <p>When creating a PR, include:</p>
-<pre><code class="language-markdown">## Description
+<div class="highlight"><pre><span></span><code><span class="gu">## Description</span>
 Brief description of the changes
 
-## Type of Change
-- [ ] Bug fix
-- [ ] New feature
-- [ ] Documentation update
-- [ ] Performance improvement
+<span class="gu">## Type of Change</span>
+<span class="k">- [ ]</span> Bug fix
+<span class="k">- [ ]</span> New feature
+<span class="k">- [ ]</span> Documentation update
+<span class="k">- [ ]</span> Performance improvement
 
-## Testing
-- [ ] Manual testing completed
-- [ ] ShellCheck passes
-- [ ] Existing functionality unaffected
+<span class="gu">## Testing</span>
+<span class="k">- [ ]</span> Manual testing completed
+<span class="k">- [ ]</span> ShellCheck passes
+<span class="k">- [ ]</span> Existing functionality unaffected
 
-## Checklist
-- [ ] Code follows style guidelines
-- [ ] Self-review completed
-- [ ] Documentation updated
-- [ ] No breaking changes (or clearly marked)
-</code></pre>
+<span class="gu">## Checklist</span>
+<span class="k">- [ ]</span> Code follows style guidelines
+<span class="k">- [ ]</span> Self-review completed
+<span class="k">- [ ]</span> Documentation updated
+<span class="k">- [ ]</span> No breaking changes (or clearly marked)
+</code></pre></div>
 <hr />
 <h2 id="project-standards">Project Standards</h2>
 <h3 id="backward-compatibility">Backward Compatibility</h3>

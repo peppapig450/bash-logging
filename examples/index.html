@@ -63,7 +63,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -121,7 +121,7 @@
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
     
       <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
@@ -131,7 +131,7 @@
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
     
       <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
@@ -755,728 +755,728 @@
 <p>Real-world usage patterns and best practices for the Bashing Logs library.</p>
 <h2 id="basic-usage-patterns">Basic Usage Patterns</h2>
 <h3 id="simple-script-template">Simple Script Template</h3>
-<pre><code class="language-bash">#!/usr/bin/env bash
-set -Eeuo pipefail
+<div class="highlight"><pre><span></span><code><span class="ch">#!/usr/bin/env bash</span>
+<span class="nb">set</span><span class="w"> </span>-Eeuo<span class="w"> </span>pipefail
 
-# Load and initialize logging
-source ./logging.lib.sh
-logging::init &quot;$0&quot;
+<span class="c1"># Load and initialize logging</span>
+<span class="nb">source</span><span class="w"> </span>./logging.lib.sh
+logging::init<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$0</span><span class="s2">&quot;</span>
 
-main() {
-    logging::log_info &quot;Script started with arguments: $*&quot;
+main<span class="o">()</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span>logging::log_info<span class="w"> </span><span class="s2">&quot;Script started with arguments: </span><span class="nv">$*</span><span class="s2">&quot;</span>
 
-    # Your script logic here
-    process_data &quot;$@&quot;
+<span class="w">    </span><span class="c1"># Your script logic here</span>
+<span class="w">    </span>process_data<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$@</span><span class="s2">&quot;</span>
 
-    logging::log_info &quot;Script completed successfully&quot;
-}
+<span class="w">    </span>logging::log_info<span class="w"> </span><span class="s2">&quot;Script completed successfully&quot;</span>
+<span class="o">}</span>
 
-process_data() {
-    logging::log_info &quot;Processing data files...&quot;
+process_data<span class="o">()</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span>logging::log_info<span class="w"> </span><span class="s2">&quot;Processing data files...&quot;</span>
 
-    for file in &quot;$@&quot;; do
-        if [[ -f &quot;$file&quot; ]]; then
-            logging::log_info &quot;Processing: $file&quot;
-            # Process file
-        else
-            logging::log_warn &quot;File not found: $file&quot;
-        fi
-    done
-}
+<span class="w">    </span><span class="k">for</span><span class="w"> </span>file<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$@</span><span class="s2">&quot;</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="o">[[</span><span class="w"> </span>-f<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$file</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">]]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">            </span>logging::log_info<span class="w"> </span><span class="s2">&quot;Processing: </span><span class="nv">$file</span><span class="s2">&quot;</span>
+<span class="w">            </span><span class="c1"># Process file</span>
+<span class="w">        </span><span class="k">else</span>
+<span class="w">            </span>logging::log_warn<span class="w"> </span><span class="s2">&quot;File not found: </span><span class="nv">$file</span><span class="s2">&quot;</span>
+<span class="w">        </span><span class="k">fi</span>
+<span class="w">    </span><span class="k">done</span>
+<span class="o">}</span>
 
-# Run main function
-main &quot;$@&quot;
-</code></pre>
+<span class="c1"># Run main function</span>
+main<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$@</span><span class="s2">&quot;</span>
+</code></pre></div>
 <h3 id="error-handling-patterns">Error Handling Patterns</h3>
-<pre><code class="language-bash">#!/usr/bin/env bash
-source ./logging.lib.sh
-logging::init &quot;$0&quot;
+<div class="highlight"><pre><span></span><code><span class="ch">#!/usr/bin/env bash</span>
+<span class="nb">source</span><span class="w"> </span>./logging.lib.sh
+logging::init<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$0</span><span class="s2">&quot;</span>
 
-# Pattern 1: Continue on error
-attempt_operation() {
-    if ! risky_command; then
-        logging::log_error &quot;Operation failed, but continuing&quot;
-        return 1
-    fi
-    logging::log_info &quot;Operation successful&quot;
-}
+<span class="c1"># Pattern 1: Continue on error</span>
+attempt_operation<span class="o">()</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span>!<span class="w"> </span>risky_command<span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">        </span>logging::log_error<span class="w"> </span><span class="s2">&quot;Operation failed, but continuing&quot;</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="m">1</span>
+<span class="w">    </span><span class="k">fi</span>
+<span class="w">    </span>logging::log_info<span class="w"> </span><span class="s2">&quot;Operation successful&quot;</span>
+<span class="o">}</span>
 
-# Pattern 2: Retry with backoff
-retry_operation() {
-    local max_attempts=3
-    local delay=1
+<span class="c1"># Pattern 2: Retry with backoff</span>
+retry_operation<span class="o">()</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span><span class="nb">local</span><span class="w"> </span><span class="nv">max_attempts</span><span class="o">=</span><span class="m">3</span>
+<span class="w">    </span><span class="nb">local</span><span class="w"> </span><span class="nv">delay</span><span class="o">=</span><span class="m">1</span>
 
-    for attempt in $(seq 1 $max_attempts); do
-        logging::log_info &quot;Attempt $attempt/$max_attempts&quot;
+<span class="w">    </span><span class="k">for</span><span class="w"> </span>attempt<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="k">$(</span>seq<span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="nv">$max_attempts</span><span class="k">)</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">        </span>logging::log_info<span class="w"> </span><span class="s2">&quot;Attempt </span><span class="nv">$attempt</span><span class="s2">/</span><span class="nv">$max_attempts</span><span class="s2">&quot;</span>
 
-        if command_that_might_fail; then
-            logging::log_info &quot;Operation succeeded on attempt $attempt&quot;
-            return 0
-        fi
+<span class="w">        </span><span class="k">if</span><span class="w"> </span>command_that_might_fail<span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">            </span>logging::log_info<span class="w"> </span><span class="s2">&quot;Operation succeeded on attempt </span><span class="nv">$attempt</span><span class="s2">&quot;</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="m">0</span>
+<span class="w">        </span><span class="k">fi</span>
 
-        if [[ $attempt -lt $max_attempts ]]; then
-            logging::log_warn &quot;Attempt $attempt failed, retrying in ${delay}s&quot;
-            sleep $delay
-            delay=$((delay * 2))  # Exponential backoff
-        fi
-    done
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="o">[[</span><span class="w"> </span><span class="nv">$attempt</span><span class="w"> </span>-lt<span class="w"> </span><span class="nv">$max_attempts</span><span class="w"> </span><span class="o">]]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">            </span>logging::log_warn<span class="w"> </span><span class="s2">&quot;Attempt </span><span class="nv">$attempt</span><span class="s2"> failed, retrying in </span><span class="si">${</span><span class="nv">delay</span><span class="si">}</span><span class="s2">s&quot;</span>
+<span class="w">            </span>sleep<span class="w"> </span><span class="nv">$delay</span>
+<span class="w">            </span><span class="nv">delay</span><span class="o">=</span><span class="k">$((</span><span class="nv">delay</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="m">2</span><span class="k">))</span><span class="w">  </span><span class="c1"># Exponential backoff</span>
+<span class="w">        </span><span class="k">fi</span>
+<span class="w">    </span><span class="k">done</span>
 
-    logging::log_fatal &quot;Operation failed after $max_attempts attempts&quot;
-}
+<span class="w">    </span>logging::log_fatal<span class="w"> </span><span class="s2">&quot;Operation failed after </span><span class="nv">$max_attempts</span><span class="s2"> attempts&quot;</span>
+<span class="o">}</span>
 
-# Pattern 3: Graceful degradation
-optional_operation() {
-    if ! optional_command; then
-        logging::log_warn &quot;Optional operation failed, using fallback&quot;
-        fallback_command
-    fi
-}
-</code></pre>
+<span class="c1"># Pattern 3: Graceful degradation</span>
+optional_operation<span class="o">()</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span>!<span class="w"> </span>optional_command<span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">        </span>logging::log_warn<span class="w"> </span><span class="s2">&quot;Optional operation failed, using fallback&quot;</span>
+<span class="w">        </span>fallback_command
+<span class="w">    </span><span class="k">fi</span>
+<span class="o">}</span>
+</code></pre></div>
 <hr />
 <h2 id="cicd-pipeline-examples">CI/CD Pipeline Examples</h2>
 <h3 id="github-actions-integration">GitHub Actions Integration</h3>
-<pre><code class="language-bash">#!/usr/bin/env bash
-# .github/scripts/build.sh
-set -Eeuo pipefail
+<div class="highlight"><pre><span></span><code><span class="ch">#!/usr/bin/env bash</span>
+<span class="c1"># .github/scripts/build.sh</span>
+<span class="nb">set</span><span class="w"> </span>-Eeuo<span class="w"> </span>pipefail
 
-source &quot;$(dirname &quot;$0&quot;)/../../lib/logging.lib.sh&quot;
-logging::init &quot;github-build&quot;
+<span class="nb">source</span><span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span>dirname<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$0</span><span class="s2">&quot;</span><span class="k">)</span><span class="s2">/../../lib/logging.lib.sh&quot;</span>
+logging::init<span class="w"> </span><span class="s2">&quot;github-build&quot;</span>
 
-build_application() {
-    logging::log_info &quot;Starting build process&quot;
-    logging::log_info &quot;Node version: $(node --version)&quot;
-    logging::log_info &quot;NPM version: $(npm --version)&quot;
+build_application<span class="o">()</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span>logging::log_info<span class="w"> </span><span class="s2">&quot;Starting build process&quot;</span>
+<span class="w">    </span>logging::log_info<span class="w"> </span><span class="s2">&quot;Node version: </span><span class="k">$(</span>node<span class="w"> </span>--version<span class="k">)</span><span class="s2">&quot;</span>
+<span class="w">    </span>logging::log_info<span class="w"> </span><span class="s2">&quot;NPM version: </span><span class="k">$(</span>npm<span class="w"> </span>--version<span class="k">)</span><span class="s2">&quot;</span>
 
-    logging::log_info &quot;Installing dependencies...&quot;
-    npm ci || logging::log_fatal &quot;Failed to install dependencies&quot;
+<span class="w">    </span>logging::log_info<span class="w"> </span><span class="s2">&quot;Installing dependencies...&quot;</span>
+<span class="w">    </span>npm<span class="w"> </span>ci<span class="w"> </span><span class="o">||</span><span class="w"> </span>logging::log_fatal<span class="w"> </span><span class="s2">&quot;Failed to install dependencies&quot;</span>
 
-    logging::log_info &quot;Running linter...&quot;
-    npm run lint || logging::log_fatal &quot;Linting failed&quot;
+<span class="w">    </span>logging::log_info<span class="w"> </span><span class="s2">&quot;Running linter...&quot;</span>
+<span class="w">    </span>npm<span class="w"> </span>run<span class="w"> </span>lint<span class="w"> </span><span class="o">||</span><span class="w"> </span>logging::log_fatal<span class="w"> </span><span class="s2">&quot;Linting failed&quot;</span>
 
-    logging::log_info &quot;Running tests...&quot;
-    if ! npm test; then
-        logging::log_error &quot;Tests failed&quot;
-        logging::log_info &quot;Uploading test artifacts...&quot;
-        # Upload test results even on failure
-        upload_test_results
-        exit 1
-    fi
+<span class="w">    </span>logging::log_info<span class="w"> </span><span class="s2">&quot;Running tests...&quot;</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span>!<span class="w"> </span>npm<span class="w"> </span>test<span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">        </span>logging::log_error<span class="w"> </span><span class="s2">&quot;Tests failed&quot;</span>
+<span class="w">        </span>logging::log_info<span class="w"> </span><span class="s2">&quot;Uploading test artifacts...&quot;</span>
+<span class="w">        </span><span class="c1"># Upload test results even on failure</span>
+<span class="w">        </span>upload_test_results
+<span class="w">        </span><span class="nb">exit</span><span class="w"> </span><span class="m">1</span>
+<span class="w">    </span><span class="k">fi</span>
 
-    logging::log_info &quot;Building application...&quot;
-    npm run build || logging::log_fatal &quot;Build failed&quot;
+<span class="w">    </span>logging::log_info<span class="w"> </span><span class="s2">&quot;Building application...&quot;</span>
+<span class="w">    </span>npm<span class="w"> </span>run<span class="w"> </span>build<span class="w"> </span><span class="o">||</span><span class="w"> </span>logging::log_fatal<span class="w"> </span><span class="s2">&quot;Build failed&quot;</span>
 
-    logging::log_info &quot;Build completed successfully&quot;
-}
+<span class="w">    </span>logging::log_info<span class="w"> </span><span class="s2">&quot;Build completed successfully&quot;</span>
+<span class="o">}</span>
 
-upload_test_results() {
-    if [[ -d &quot;test-results&quot; ]]; then
-        logging::log_info &quot;Uploading test results to artifacts&quot;
-        # GitHub Actions artifact upload logic
-    fi
-}
+upload_test_results<span class="o">()</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="o">[[</span><span class="w"> </span>-d<span class="w"> </span><span class="s2">&quot;test-results&quot;</span><span class="w"> </span><span class="o">]]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">        </span>logging::log_info<span class="w"> </span><span class="s2">&quot;Uploading test results to artifacts&quot;</span>
+<span class="w">        </span><span class="c1"># GitHub Actions artifact upload logic</span>
+<span class="w">    </span><span class="k">fi</span>
+<span class="o">}</span>
 
 build_application
-</code></pre>
+</code></pre></div>
 <h3 id="docker-build-pipeline">Docker Build Pipeline</h3>
-<pre><code class="language-bash">#!/usr/bin/env bash
-# scripts/docker-build.sh
-set -Eeuo pipefail
+<div class="highlight"><pre><span></span><code><span class="ch">#!/usr/bin/env bash</span>
+<span class="c1"># scripts/docker-build.sh</span>
+<span class="nb">set</span><span class="w"> </span>-Eeuo<span class="w"> </span>pipefail
 
-source ./logging.lib.sh
-logging::init &quot;docker-build&quot;
+<span class="nb">source</span><span class="w"> </span>./logging.lib.sh
+logging::init<span class="w"> </span><span class="s2">&quot;docker-build&quot;</span>
 
-readonly IMAGE_NAME=&quot;${1:-myapp}&quot;
-readonly TAG=&quot;${2:-latest}&quot;
-readonly DOCKERFILE=&quot;${3:-Dockerfile}&quot;
+<span class="nb">readonly</span><span class="w"> </span><span class="nv">IMAGE_NAME</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">1</span><span class="k">:-</span><span class="nv">myapp</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="nb">readonly</span><span class="w"> </span><span class="nv">TAG</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">2</span><span class="k">:-</span><span class="nv">latest</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="nb">readonly</span><span class="w"> </span><span class="nv">DOCKERFILE</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">3</span><span class="k">:-</span><span class="nv">Dockerfile</span><span class="si">}</span><span class="s2">&quot;</span>
 
-build_docker_image() {
-    logging::log_info &quot;Building Docker image: $IMAGE_NAME:$TAG&quot;
-    logging::log_info &quot;Using Dockerfile: $DOCKERFILE&quot;
+build_docker_image<span class="o">()</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span>logging::log_info<span class="w"> </span><span class="s2">&quot;Building Docker image: </span><span class="nv">$IMAGE_NAME</span><span class="s2">:</span><span class="nv">$TAG</span><span class="s2">&quot;</span>
+<span class="w">    </span>logging::log_info<span class="w"> </span><span class="s2">&quot;Using Dockerfile: </span><span class="nv">$DOCKERFILE</span><span class="s2">&quot;</span>
 
-    # Check prerequisites
-    command -v docker &gt;/dev/null || logging::log_fatal &quot;Docker not found&quot;
-    [[ -f &quot;$DOCKERFILE&quot; ]] || logging::log_fatal &quot;Dockerfile not found: $DOCKERFILE&quot;
+<span class="w">    </span><span class="c1"># Check prerequisites</span>
+<span class="w">    </span><span class="nb">command</span><span class="w"> </span>-v<span class="w"> </span>docker<span class="w"> </span>&gt;/dev/null<span class="w"> </span><span class="o">||</span><span class="w"> </span>logging::log_fatal<span class="w"> </span><span class="s2">&quot;Docker not found&quot;</span>
+<span class="w">    </span><span class="o">[[</span><span class="w"> </span>-f<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$DOCKERFILE</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">]]</span><span class="w"> </span><span class="o">||</span><span class="w"> </span>logging::log_fatal<span class="w"> </span><span class="s2">&quot;Dockerfile not found: </span><span class="nv">$DOCKERFILE</span><span class="s2">&quot;</span>
 
-    # Build with progress logging
-    logging::log_info &quot;Starting Docker build...&quot;
-    if docker build -t &quot;$IMAGE_NAME:$TAG&quot; -f &quot;$DOCKERFILE&quot; . 2&gt;&amp;1 | \
-       while IFS= read -r line; do
-           logging::log_info &quot;DOCKER: $line&quot;
-       done; then
-        logging::log_info &quot;Docker build successful&quot;
-    else
-        logging::log_fatal &quot;Docker build failed&quot;
-    fi
+<span class="w">    </span><span class="c1"># Build with progress logging</span>
+<span class="w">    </span>logging::log_info<span class="w"> </span><span class="s2">&quot;Starting Docker build...&quot;</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span>docker<span class="w"> </span>build<span class="w"> </span>-t<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$IMAGE_NAME</span><span class="s2">:</span><span class="nv">$TAG</span><span class="s2">&quot;</span><span class="w"> </span>-f<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$DOCKERFILE</span><span class="s2">&quot;</span><span class="w"> </span>.<span class="w"> </span><span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="se">\</span>
+<span class="w">       </span><span class="k">while</span><span class="w"> </span><span class="nv">IFS</span><span class="o">=</span><span class="w"> </span><span class="nb">read</span><span class="w"> </span>-r<span class="w"> </span>line<span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">           </span>logging::log_info<span class="w"> </span><span class="s2">&quot;DOCKER: </span><span class="nv">$line</span><span class="s2">&quot;</span>
+<span class="w">       </span><span class="k">done</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">        </span>logging::log_info<span class="w"> </span><span class="s2">&quot;Docker build successful&quot;</span>
+<span class="w">    </span><span class="k">else</span>
+<span class="w">        </span>logging::log_fatal<span class="w"> </span><span class="s2">&quot;Docker build failed&quot;</span>
+<span class="w">    </span><span class="k">fi</span>
 
-    # Verify image
-    if docker image inspect &quot;$IMAGE_NAME:$TAG&quot; &gt;/dev/null 2&gt;&amp;1; then
-        local size
-        size=$(docker image inspect &quot;$IMAGE_NAME:$TAG&quot; --format='{{.Size}}' | numfmt --to=iec)
-        logging::log_info &quot;Image created successfully, size: $size&quot;
-    else
-        logging::log_fatal &quot;Image verification failed&quot;
-    fi
-}
+<span class="w">    </span><span class="c1"># Verify image</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span>docker<span class="w"> </span>image<span class="w"> </span>inspect<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$IMAGE_NAME</span><span class="s2">:</span><span class="nv">$TAG</span><span class="s2">&quot;</span><span class="w"> </span>&gt;/dev/null<span class="w"> </span><span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">        </span><span class="nb">local</span><span class="w"> </span>size
+<span class="w">        </span><span class="nv">size</span><span class="o">=</span><span class="k">$(</span>docker<span class="w"> </span>image<span class="w"> </span>inspect<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$IMAGE_NAME</span><span class="s2">:</span><span class="nv">$TAG</span><span class="s2">&quot;</span><span class="w"> </span>--format<span class="o">=</span><span class="s1">&#39;{{.Size}}&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>numfmt<span class="w"> </span>--to<span class="o">=</span>iec<span class="k">)</span>
+<span class="w">        </span>logging::log_info<span class="w"> </span><span class="s2">&quot;Image created successfully, size: </span><span class="nv">$size</span><span class="s2">&quot;</span>
+<span class="w">    </span><span class="k">else</span>
+<span class="w">        </span>logging::log_fatal<span class="w"> </span><span class="s2">&quot;Image verification failed&quot;</span>
+<span class="w">    </span><span class="k">fi</span>
+<span class="o">}</span>
 
 build_docker_image
-</code></pre>
+</code></pre></div>
 <hr />
 <h2 id="system-administration-scripts">System Administration Scripts</h2>
 <h3 id="backup-script">Backup Script</h3>
-<pre><code class="language-bash">#!/usr/bin/env bash
-set -Eeuo pipefail
+<div class="highlight"><pre><span></span><code><span class="ch">#!/usr/bin/env bash</span>
+<span class="nb">set</span><span class="w"> </span>-Eeuo<span class="w"> </span>pipefail
 
-source ./logging.lib.sh
-logging::init &quot;backup-script&quot;
+<span class="nb">source</span><span class="w"> </span>./logging.lib.sh
+logging::init<span class="w"> </span><span class="s2">&quot;backup-script&quot;</span>
 
-readonly BACKUP_SOURCE=&quot;${1:-/var/www}&quot;
-readonly BACKUP_DEST=&quot;${2:-/backup/$(date +%Y%m%d)}&quot;
-readonly RETENTION_DAYS=&quot;${3:-30}&quot;
+<span class="nb">readonly</span><span class="w"> </span><span class="nv">BACKUP_SOURCE</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">1</span><span class="k">:-</span><span class="p">/var/www</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="nb">readonly</span><span class="w"> </span><span class="nv">BACKUP_DEST</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">2</span><span class="k">:-</span><span class="p">/backup/</span><span class="k">$(</span>date<span class="w"> </span>+%Y%m%d<span class="k">)</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="nb">readonly</span><span class="w"> </span><span class="nv">RETENTION_DAYS</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">3</span><span class="k">:-</span><span class="nv">30</span><span class="si">}</span><span class="s2">&quot;</span>
 
-perform_backup() {
-    logging::log_info &quot;Starting backup process&quot;
-    logging::log_info &quot;Source: $BACKUP_SOURCE&quot;
-    logging::log_info &quot;Destination: $BACKUP_DEST&quot;
+perform_backup<span class="o">()</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span>logging::log_info<span class="w"> </span><span class="s2">&quot;Starting backup process&quot;</span>
+<span class="w">    </span>logging::log_info<span class="w"> </span><span class="s2">&quot;Source: </span><span class="nv">$BACKUP_SOURCE</span><span class="s2">&quot;</span>
+<span class="w">    </span>logging::log_info<span class="w"> </span><span class="s2">&quot;Destination: </span><span class="nv">$BACKUP_DEST</span><span class="s2">&quot;</span>
 
-    # Pre-backup checks
-    check_prerequisites
-    create_backup_directory
+<span class="w">    </span><span class="c1"># Pre-backup checks</span>
+<span class="w">    </span>check_prerequisites
+<span class="w">    </span>create_backup_directory
 
-    # Perform backup
-    logging::log_info &quot;Creating backup...&quot;
-    local start_time
-    start_time=$(date +%s)
+<span class="w">    </span><span class="c1"># Perform backup</span>
+<span class="w">    </span>logging::log_info<span class="w"> </span><span class="s2">&quot;Creating backup...&quot;</span>
+<span class="w">    </span><span class="nb">local</span><span class="w"> </span>start_time
+<span class="w">    </span><span class="nv">start_time</span><span class="o">=</span><span class="k">$(</span>date<span class="w"> </span>+%s<span class="k">)</span>
 
-    if rsync -av --progress &quot;$BACKUP_SOURCE/&quot; &quot;$BACKUP_DEST/&quot; 2&gt;&amp;1 | \
-       while IFS= read -r line; do
-           # Log rsync progress (simplified)
-           if [[ &quot;$line&quot; =~ ^[0-9]+% ]]; then
-               logging::log_info &quot;Progress: $line&quot;
-           fi
-       done; then
-        local end_time duration
-        end_time=$(date +%s)
-        duration=$((end_time - start_time))
-        logging::log_info &quot;Backup completed in ${duration}s&quot;
-    else
-        logging::log_fatal &quot;Backup failed&quot;
-    fi
+<span class="w">    </span><span class="k">if</span><span class="w"> </span>rsync<span class="w"> </span>-av<span class="w"> </span>--progress<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$BACKUP_SOURCE</span><span class="s2">/&quot;</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$BACKUP_DEST</span><span class="s2">/&quot;</span><span class="w"> </span><span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="se">\</span>
+<span class="w">       </span><span class="k">while</span><span class="w"> </span><span class="nv">IFS</span><span class="o">=</span><span class="w"> </span><span class="nb">read</span><span class="w"> </span>-r<span class="w"> </span>line<span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">           </span><span class="c1"># Log rsync progress (simplified)</span>
+<span class="w">           </span><span class="k">if</span><span class="w"> </span><span class="o">[[</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$line</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">=</span>~<span class="w"> </span>^<span class="o">[</span><span class="m">0</span>-9<span class="o">]</span>+%<span class="w"> </span><span class="o">]]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">               </span>logging::log_info<span class="w"> </span><span class="s2">&quot;Progress: </span><span class="nv">$line</span><span class="s2">&quot;</span>
+<span class="w">           </span><span class="k">fi</span>
+<span class="w">       </span><span class="k">done</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">        </span><span class="nb">local</span><span class="w"> </span>end_time<span class="w"> </span>duration
+<span class="w">        </span><span class="nv">end_time</span><span class="o">=</span><span class="k">$(</span>date<span class="w"> </span>+%s<span class="k">)</span>
+<span class="w">        </span><span class="nv">duration</span><span class="o">=</span><span class="k">$((</span><span class="nv">end_time</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nv">start_time</span><span class="k">))</span>
+<span class="w">        </span>logging::log_info<span class="w"> </span><span class="s2">&quot;Backup completed in </span><span class="si">${</span><span class="nv">duration</span><span class="si">}</span><span class="s2">s&quot;</span>
+<span class="w">    </span><span class="k">else</span>
+<span class="w">        </span>logging::log_fatal<span class="w"> </span><span class="s2">&quot;Backup failed&quot;</span>
+<span class="w">    </span><span class="k">fi</span>
 
-    # Post-backup tasks
-    verify_backup
-    cleanup_old_backups
+<span class="w">    </span><span class="c1"># Post-backup tasks</span>
+<span class="w">    </span>verify_backup
+<span class="w">    </span>cleanup_old_backups
 
-    logging::log_info &quot;Backup process completed successfully&quot;
-}
+<span class="w">    </span>logging::log_info<span class="w"> </span><span class="s2">&quot;Backup process completed successfully&quot;</span>
+<span class="o">}</span>
 
-check_prerequisites() {
-    logging::log_info &quot;Checking prerequisites...&quot;
+check_prerequisites<span class="o">()</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span>logging::log_info<span class="w"> </span><span class="s2">&quot;Checking prerequisites...&quot;</span>
 
-    [[ -d &quot;$BACKUP_SOURCE&quot; ]] || logging::log_fatal &quot;Source directory not found: $BACKUP_SOURCE&quot;
-    command -v rsync &gt;/dev/null || logging::log_fatal &quot;rsync not found&quot;
+<span class="w">    </span><span class="o">[[</span><span class="w"> </span>-d<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$BACKUP_SOURCE</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">]]</span><span class="w"> </span><span class="o">||</span><span class="w"> </span>logging::log_fatal<span class="w"> </span><span class="s2">&quot;Source directory not found: </span><span class="nv">$BACKUP_SOURCE</span><span class="s2">&quot;</span>
+<span class="w">    </span><span class="nb">command</span><span class="w"> </span>-v<span class="w"> </span>rsync<span class="w"> </span>&gt;/dev/null<span class="w"> </span><span class="o">||</span><span class="w"> </span>logging::log_fatal<span class="w"> </span><span class="s2">&quot;rsync not found&quot;</span>
 
-    # Check available space
-    local available_space
-    available_space=$(df &quot;$(dirname &quot;$BACKUP_DEST&quot;)&quot; | awk 'NR==2 {print $4}')
-    if [[ $available_space -lt 1000000 ]]; then  # Less than 1GB
-        logging::log_warn &quot;Low disk space: ${available_space}KB available&quot;
-    fi
-}
+<span class="w">    </span><span class="c1"># Check available space</span>
+<span class="w">    </span><span class="nb">local</span><span class="w"> </span>available_space
+<span class="w">    </span><span class="nv">available_space</span><span class="o">=</span><span class="k">$(</span>df<span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span>dirname<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$BACKUP_DEST</span><span class="s2">&quot;</span><span class="k">)</span><span class="s2">&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>awk<span class="w"> </span><span class="s1">&#39;NR==2 {print $4}&#39;</span><span class="k">)</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="o">[[</span><span class="w"> </span><span class="nv">$available_space</span><span class="w"> </span>-lt<span class="w"> </span><span class="m">1000000</span><span class="w"> </span><span class="o">]]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span><span class="w">  </span><span class="c1"># Less than 1GB</span>
+<span class="w">        </span>logging::log_warn<span class="w"> </span><span class="s2">&quot;Low disk space: </span><span class="si">${</span><span class="nv">available_space</span><span class="si">}</span><span class="s2">KB available&quot;</span>
+<span class="w">    </span><span class="k">fi</span>
+<span class="o">}</span>
 
-create_backup_directory() {
-    if [[ ! -d &quot;$BACKUP_DEST&quot; ]]; then
-        logging::log_info &quot;Creating backup directory: $BACKUP_DEST&quot;
-        mkdir -p &quot;$BACKUP_DEST&quot; || logging::log_fatal &quot;Failed to create backup directory&quot;
-    fi
-}
+create_backup_directory<span class="o">()</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="o">[[</span><span class="w"> </span>!<span class="w"> </span>-d<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$BACKUP_DEST</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">]]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">        </span>logging::log_info<span class="w"> </span><span class="s2">&quot;Creating backup directory: </span><span class="nv">$BACKUP_DEST</span><span class="s2">&quot;</span>
+<span class="w">        </span>mkdir<span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$BACKUP_DEST</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span>logging::log_fatal<span class="w"> </span><span class="s2">&quot;Failed to create backup directory&quot;</span>
+<span class="w">    </span><span class="k">fi</span>
+<span class="o">}</span>
 
-verify_backup() {
-    logging::log_info &quot;Verifying backup integrity...&quot;
+verify_backup<span class="o">()</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span>logging::log_info<span class="w"> </span><span class="s2">&quot;Verifying backup integrity...&quot;</span>
 
-    local source_count backup_count
-    source_count=$(find &quot;$BACKUP_SOURCE&quot; -type f | wc -l)
-    backup_count=$(find &quot;$BACKUP_DEST&quot; -type f | wc -l)
+<span class="w">    </span><span class="nb">local</span><span class="w"> </span>source_count<span class="w"> </span>backup_count
+<span class="w">    </span><span class="nv">source_count</span><span class="o">=</span><span class="k">$(</span>find<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$BACKUP_SOURCE</span><span class="s2">&quot;</span><span class="w"> </span>-type<span class="w"> </span>f<span class="w"> </span><span class="p">|</span><span class="w"> </span>wc<span class="w"> </span>-l<span class="k">)</span>
+<span class="w">    </span><span class="nv">backup_count</span><span class="o">=</span><span class="k">$(</span>find<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$BACKUP_DEST</span><span class="s2">&quot;</span><span class="w"> </span>-type<span class="w"> </span>f<span class="w"> </span><span class="p">|</span><span class="w"> </span>wc<span class="w"> </span>-l<span class="k">)</span>
 
-    if [[ $source_count -eq $backup_count ]]; then
-        logging::log_info &quot;Backup verification successful: $backup_count files&quot;
-    else
-        logging::log_error &quot;Backup verification failed: $source_count source files, $backup_count backup files&quot;
-    fi
-}
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="o">[[</span><span class="w"> </span><span class="nv">$source_count</span><span class="w"> </span>-eq<span class="w"> </span><span class="nv">$backup_count</span><span class="w"> </span><span class="o">]]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">        </span>logging::log_info<span class="w"> </span><span class="s2">&quot;Backup verification successful: </span><span class="nv">$backup_count</span><span class="s2"> files&quot;</span>
+<span class="w">    </span><span class="k">else</span>
+<span class="w">        </span>logging::log_error<span class="w"> </span><span class="s2">&quot;Backup verification failed: </span><span class="nv">$source_count</span><span class="s2"> source files, </span><span class="nv">$backup_count</span><span class="s2"> backup files&quot;</span>
+<span class="w">    </span><span class="k">fi</span>
+<span class="o">}</span>
 
-cleanup_old_backups() {
-    logging::log_info &quot;Cleaning up backups older than $RETENTION_DAYS days...&quot;
+cleanup_old_backups<span class="o">()</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span>logging::log_info<span class="w"> </span><span class="s2">&quot;Cleaning up backups older than </span><span class="nv">$RETENTION_DAYS</span><span class="s2"> days...&quot;</span>
 
-    local base_dir
-    base_dir=$(dirname &quot;$BACKUP_DEST&quot;)
+<span class="w">    </span><span class="nb">local</span><span class="w"> </span>base_dir
+<span class="w">    </span><span class="nv">base_dir</span><span class="o">=</span><span class="k">$(</span>dirname<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$BACKUP_DEST</span><span class="s2">&quot;</span><span class="k">)</span>
 
-    find &quot;$base_dir&quot; -type d -name &quot;????????&quot; -mtime +$RETENTION_DAYS | while read -r old_backup; do
-        logging::log_info &quot;Removing old backup: $old_backup&quot;
-        rm -rf &quot;$old_backup&quot;
-    done
-}
+<span class="w">    </span>find<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$base_dir</span><span class="s2">&quot;</span><span class="w"> </span>-type<span class="w"> </span>d<span class="w"> </span>-name<span class="w"> </span><span class="s2">&quot;????????&quot;</span><span class="w"> </span>-mtime<span class="w"> </span>+<span class="nv">$RETENTION_DAYS</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="k">while</span><span class="w"> </span><span class="nb">read</span><span class="w"> </span>-r<span class="w"> </span>old_backup<span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">        </span>logging::log_info<span class="w"> </span><span class="s2">&quot;Removing old backup: </span><span class="nv">$old_backup</span><span class="s2">&quot;</span>
+<span class="w">        </span>rm<span class="w"> </span>-rf<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$old_backup</span><span class="s2">&quot;</span>
+<span class="w">    </span><span class="k">done</span>
+<span class="o">}</span>
 
 perform_backup
-</code></pre>
+</code></pre></div>
 <h3 id="service-deployment-script">Service Deployment Script</h3>
-<pre><code class="language-bash">#!/usr/bin/env bash
-set -Eeuo pipefail
+<div class="highlight"><pre><span></span><code><span class="ch">#!/usr/bin/env bash</span>
+<span class="nb">set</span><span class="w"> </span>-Eeuo<span class="w"> </span>pipefail
 
-source ./logging.lib.sh
-logging::init &quot;deploy-service&quot;
+<span class="nb">source</span><span class="w"> </span>./logging.lib.sh
+logging::init<span class="w"> </span><span class="s2">&quot;deploy-service&quot;</span>
 
-readonly SERVICE_NAME=&quot;${1:?Service name required}&quot;
-readonly VERSION=&quot;${2:?Version required}&quot;
-readonly ENVIRONMENT=&quot;${3:-staging}&quot;
+<span class="nb">readonly</span><span class="w"> </span><span class="nv">SERVICE_NAME</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">1</span><span class="p">:?Service name required</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="nb">readonly</span><span class="w"> </span><span class="nv">VERSION</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">2</span><span class="p">:?Version required</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="nb">readonly</span><span class="w"> </span><span class="nv">ENVIRONMENT</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">3</span><span class="k">:-</span><span class="nv">staging</span><span class="si">}</span><span class="s2">&quot;</span>
 
-deploy_service() {
-    logging::log_info &quot;Deploying $SERVICE_NAME v$VERSION to $ENVIRONMENT&quot;
+deploy_service<span class="o">()</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span>logging::log_info<span class="w"> </span><span class="s2">&quot;Deploying </span><span class="nv">$SERVICE_NAME</span><span class="s2"> v</span><span class="nv">$VERSION</span><span class="s2"> to </span><span class="nv">$ENVIRONMENT</span><span class="s2">&quot;</span>
 
-    # Pre-deployment checks
-    validate_environment
-    check_service_health
+<span class="w">    </span><span class="c1"># Pre-deployment checks</span>
+<span class="w">    </span>validate_environment
+<span class="w">    </span>check_service_health
 
-    # Deployment steps
-    backup_current_version
-    download_new_version
-    update_configuration
-    restart_service
-    verify_deployment
+<span class="w">    </span><span class="c1"># Deployment steps</span>
+<span class="w">    </span>backup_current_version
+<span class="w">    </span>download_new_version
+<span class="w">    </span>update_configuration
+<span class="w">    </span>restart_service
+<span class="w">    </span>verify_deployment
 
-    logging::log_info &quot;Deployment completed successfully&quot;
-}
+<span class="w">    </span>logging::log_info<span class="w"> </span><span class="s2">&quot;Deployment completed successfully&quot;</span>
+<span class="o">}</span>
 
-validate_environment() {
-    logging::log_info &quot;Validating deployment environment...&quot;
+validate_environment<span class="o">()</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span>logging::log_info<span class="w"> </span><span class="s2">&quot;Validating deployment environment...&quot;</span>
 
-    case &quot;$ENVIRONMENT&quot; in
-        staging|production)
-            logging::log_info &quot;Deploying to $ENVIRONMENT environment&quot;
-            ;;
-        *)
-            logging::log_fatal &quot;Invalid environment: $ENVIRONMENT&quot;
-            ;;
-    esac
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$ENVIRONMENT</span><span class="s2">&quot;</span><span class="w"> </span><span class="k">in</span>
+<span class="w">        </span>staging<span class="p">|</span>production<span class="o">)</span>
+<span class="w">            </span>logging::log_info<span class="w"> </span><span class="s2">&quot;Deploying to </span><span class="nv">$ENVIRONMENT</span><span class="s2"> environment&quot;</span>
+<span class="w">            </span><span class="p">;;</span>
+<span class="w">        </span>*<span class="o">)</span>
+<span class="w">            </span>logging::log_fatal<span class="w"> </span><span class="s2">&quot;Invalid environment: </span><span class="nv">$ENVIRONMENT</span><span class="s2">&quot;</span>
+<span class="w">            </span><span class="p">;;</span>
+<span class="w">    </span><span class="k">esac</span>
 
-    # Check if service exists
-    if ! systemctl list-units --full --all | grep -q &quot;$SERVICE_NAME&quot;; then
-        logging::log_fatal &quot;Service not found: $SERVICE_NAME&quot;
-    fi
-}
+<span class="w">    </span><span class="c1"># Check if service exists</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span>!<span class="w"> </span>systemctl<span class="w"> </span>list-units<span class="w"> </span>--full<span class="w"> </span>--all<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-q<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$SERVICE_NAME</span><span class="s2">&quot;</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">        </span>logging::log_fatal<span class="w"> </span><span class="s2">&quot;Service not found: </span><span class="nv">$SERVICE_NAME</span><span class="s2">&quot;</span>
+<span class="w">    </span><span class="k">fi</span>
+<span class="o">}</span>
 
-check_service_health() {
-    logging::log_info &quot;Checking current service health...&quot;
+check_service_health<span class="o">()</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span>logging::log_info<span class="w"> </span><span class="s2">&quot;Checking current service health...&quot;</span>
 
-    if systemctl is-active --quiet &quot;$SERVICE_NAME&quot;; then
-        logging::log_info &quot;Service is currently running&quot;
+<span class="w">    </span><span class="k">if</span><span class="w"> </span>systemctl<span class="w"> </span>is-active<span class="w"> </span>--quiet<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$SERVICE_NAME</span><span class="s2">&quot;</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">        </span>logging::log_info<span class="w"> </span><span class="s2">&quot;Service is currently running&quot;</span>
 
-        # Check service endpoint if available
-        if curl -sf &quot;http://localhost:8080/health&quot; &gt;/dev/null 2&gt;&amp;1; then
-            logging::log_info &quot;Service health check passed&quot;
-        else
-            logging::log_warn &quot;Service health check failed, proceeding anyway&quot;
-        fi
-    else
-        logging::log_warn &quot;Service is not currently running&quot;
-    fi
-}
+<span class="w">        </span><span class="c1"># Check service endpoint if available</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span>curl<span class="w"> </span>-sf<span class="w"> </span><span class="s2">&quot;http://localhost:8080/health&quot;</span><span class="w"> </span>&gt;/dev/null<span class="w"> </span><span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">            </span>logging::log_info<span class="w"> </span><span class="s2">&quot;Service health check passed&quot;</span>
+<span class="w">        </span><span class="k">else</span>
+<span class="w">            </span>logging::log_warn<span class="w"> </span><span class="s2">&quot;Service health check failed, proceeding anyway&quot;</span>
+<span class="w">        </span><span class="k">fi</span>
+<span class="w">    </span><span class="k">else</span>
+<span class="w">        </span>logging::log_warn<span class="w"> </span><span class="s2">&quot;Service is not currently running&quot;</span>
+<span class="w">    </span><span class="k">fi</span>
+<span class="o">}</span>
 
-backup_current_version() {
-    logging::log_info &quot;Backing up current version...&quot;
+backup_current_version<span class="o">()</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span>logging::log_info<span class="w"> </span><span class="s2">&quot;Backing up current version...&quot;</span>
 
-    local backup_dir=&quot;/backup/deployments/$(date +%Y%m%d_%H%M%S)&quot;
-    mkdir -p &quot;$backup_dir&quot;
+<span class="w">    </span><span class="nb">local</span><span class="w"> </span><span class="nv">backup_dir</span><span class="o">=</span><span class="s2">&quot;/backup/deployments/</span><span class="k">$(</span>date<span class="w"> </span>+%Y%m%d_%H%M%S<span class="k">)</span><span class="s2">&quot;</span>
+<span class="w">    </span>mkdir<span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$backup_dir</span><span class="s2">&quot;</span>
 
-    cp -r &quot;/opt/$SERVICE_NAME&quot; &quot;$backup_dir/&quot; || {
-        logging::log_error &quot;Backup failed, but continuing deployment&quot;
-    }
-}
+<span class="w">    </span>cp<span class="w"> </span>-r<span class="w"> </span><span class="s2">&quot;/opt/</span><span class="nv">$SERVICE_NAME</span><span class="s2">&quot;</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$backup_dir</span><span class="s2">/&quot;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="o">{</span>
+<span class="w">        </span>logging::log_error<span class="w"> </span><span class="s2">&quot;Backup failed, but continuing deployment&quot;</span>
+<span class="w">    </span><span class="o">}</span>
+<span class="o">}</span>
 
-download_new_version() {
-    logging::log_info &quot;Downloading version $VERSION...&quot;
+download_new_version<span class="o">()</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span>logging::log_info<span class="w"> </span><span class="s2">&quot;Downloading version </span><span class="nv">$VERSION</span><span class="s2">...&quot;</span>
 
-    local download_url=&quot;https://releases.example.com/$SERVICE_NAME/$VERSION.tar.gz&quot;
-    local temp_file=&quot;/tmp/$SERVICE_NAME-$VERSION.tar.gz&quot;
+<span class="w">    </span><span class="nb">local</span><span class="w"> </span><span class="nv">download_url</span><span class="o">=</span><span class="s2">&quot;https://releases.example.com/</span><span class="nv">$SERVICE_NAME</span><span class="s2">/</span><span class="nv">$VERSION</span><span class="s2">.tar.gz&quot;</span>
+<span class="w">    </span><span class="nb">local</span><span class="w"> </span><span class="nv">temp_file</span><span class="o">=</span><span class="s2">&quot;/tmp/</span><span class="nv">$SERVICE_NAME</span><span class="s2">-</span><span class="nv">$VERSION</span><span class="s2">.tar.gz&quot;</span>
 
-    if curl -L -o &quot;$temp_file&quot; &quot;$download_url&quot;; then
-        logging::log_info &quot;Download completed&quot;
+<span class="w">    </span><span class="k">if</span><span class="w"> </span>curl<span class="w"> </span>-L<span class="w"> </span>-o<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$temp_file</span><span class="s2">&quot;</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$download_url</span><span class="s2">&quot;</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">        </span>logging::log_info<span class="w"> </span><span class="s2">&quot;Download completed&quot;</span>
 
-        # Verify checksum if available
-        if curl -sf &quot;${download_url}.sha256&quot; &gt;/dev/null 2&gt;&amp;1; then
-            logging::log_info &quot;Verifying checksum...&quot;
-            cd &quot;$(dirname &quot;$temp_file&quot;)&quot;
-            curl -L &quot;${download_url}.sha256&quot; | sha256sum -c || logging::log_fatal &quot;Checksum verification failed&quot;
-        fi
+<span class="w">        </span><span class="c1"># Verify checksum if available</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span>curl<span class="w"> </span>-sf<span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">download_url</span><span class="si">}</span><span class="s2">.sha256&quot;</span><span class="w"> </span>&gt;/dev/null<span class="w"> </span><span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">            </span>logging::log_info<span class="w"> </span><span class="s2">&quot;Verifying checksum...&quot;</span>
+<span class="w">            </span><span class="nb">cd</span><span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span>dirname<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$temp_file</span><span class="s2">&quot;</span><span class="k">)</span><span class="s2">&quot;</span>
+<span class="w">            </span>curl<span class="w"> </span>-L<span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">download_url</span><span class="si">}</span><span class="s2">.sha256&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sha256sum<span class="w"> </span>-c<span class="w"> </span><span class="o">||</span><span class="w"> </span>logging::log_fatal<span class="w"> </span><span class="s2">&quot;Checksum verification failed&quot;</span>
+<span class="w">        </span><span class="k">fi</span>
 
-        # Extract
-        logging::log_info &quot;Extracting archive...&quot;
-        tar -xzf &quot;$temp_file&quot; -C &quot;/opt/&quot; || logging::log_fatal &quot;Extraction failed&quot;
-        rm &quot;$temp_file&quot;
-    else
-        logging::log_fatal &quot;Download failed: $download_url&quot;
-    fi
-}
+<span class="w">        </span><span class="c1"># Extract</span>
+<span class="w">        </span>logging::log_info<span class="w"> </span><span class="s2">&quot;Extracting archive...&quot;</span>
+<span class="w">        </span>tar<span class="w"> </span>-xzf<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$temp_file</span><span class="s2">&quot;</span><span class="w"> </span>-C<span class="w"> </span><span class="s2">&quot;/opt/&quot;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span>logging::log_fatal<span class="w"> </span><span class="s2">&quot;Extraction failed&quot;</span>
+<span class="w">        </span>rm<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$temp_file</span><span class="s2">&quot;</span>
+<span class="w">    </span><span class="k">else</span>
+<span class="w">        </span>logging::log_fatal<span class="w"> </span><span class="s2">&quot;Download failed: </span><span class="nv">$download_url</span><span class="s2">&quot;</span>
+<span class="w">    </span><span class="k">fi</span>
+<span class="o">}</span>
 
-update_configuration() {
-    logging::log_info &quot;Updating configuration...&quot;
+update_configuration<span class="o">()</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span>logging::log_info<span class="w"> </span><span class="s2">&quot;Updating configuration...&quot;</span>
 
-    local config_file=&quot;/opt/$SERVICE_NAME/config.yml&quot;
-    if [[ -f &quot;$config_file.template&quot; ]]; then
-        envsubst &lt; &quot;$config_file.template&quot; &gt; &quot;$config_file&quot;
-        logging::log_info &quot;Configuration updated from template&quot;
-    fi
-}
+<span class="w">    </span><span class="nb">local</span><span class="w"> </span><span class="nv">config_file</span><span class="o">=</span><span class="s2">&quot;/opt/</span><span class="nv">$SERVICE_NAME</span><span class="s2">/config.yml&quot;</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="o">[[</span><span class="w"> </span>-f<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$config_file</span><span class="s2">.template&quot;</span><span class="w"> </span><span class="o">]]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">        </span>envsubst<span class="w"> </span>&lt;<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$config_file</span><span class="s2">.template&quot;</span><span class="w"> </span>&gt;<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$config_file</span><span class="s2">&quot;</span>
+<span class="w">        </span>logging::log_info<span class="w"> </span><span class="s2">&quot;Configuration updated from template&quot;</span>
+<span class="w">    </span><span class="k">fi</span>
+<span class="o">}</span>
 
-restart_service() {
-    logging::log_info &quot;Restarting service...&quot;
+restart_service<span class="o">()</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span>logging::log_info<span class="w"> </span><span class="s2">&quot;Restarting service...&quot;</span>
 
-    systemctl restart &quot;$SERVICE_NAME&quot; || logging::log_fatal &quot;Failed to restart service&quot;
+<span class="w">    </span>systemctl<span class="w"> </span>restart<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$SERVICE_NAME</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span>logging::log_fatal<span class="w"> </span><span class="s2">&quot;Failed to restart service&quot;</span>
 
-    # Wait for service to be ready
-    local attempts=30
-    while [[ $attempts -gt 0 ]]; do
-        if systemctl is-active --quiet &quot;$SERVICE_NAME&quot;; then
-            logging::log_info &quot;Service started successfully&quot;
-            return 0
-        fi
-        logging::log_info &quot;Waiting for service to start... ($attempts attempts remaining)&quot;
-        sleep 2
-        ((attempts--))
-    done
+<span class="w">    </span><span class="c1"># Wait for service to be ready</span>
+<span class="w">    </span><span class="nb">local</span><span class="w"> </span><span class="nv">attempts</span><span class="o">=</span><span class="m">30</span>
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="o">[[</span><span class="w"> </span><span class="nv">$attempts</span><span class="w"> </span>-gt<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="o">]]</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span>systemctl<span class="w"> </span>is-active<span class="w"> </span>--quiet<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$SERVICE_NAME</span><span class="s2">&quot;</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">            </span>logging::log_info<span class="w"> </span><span class="s2">&quot;Service started successfully&quot;</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="m">0</span>
+<span class="w">        </span><span class="k">fi</span>
+<span class="w">        </span>logging::log_info<span class="w"> </span><span class="s2">&quot;Waiting for service to start... (</span><span class="nv">$attempts</span><span class="s2"> attempts remaining)&quot;</span>
+<span class="w">        </span>sleep<span class="w"> </span><span class="m">2</span>
+<span class="w">        </span><span class="o">((</span>attempts--<span class="o">))</span>
+<span class="w">    </span><span class="k">done</span>
 
-    logging::log_fatal &quot;Service failed to start within timeout&quot;
-}
+<span class="w">    </span>logging::log_fatal<span class="w"> </span><span class="s2">&quot;Service failed to start within timeout&quot;</span>
+<span class="o">}</span>
 
-verify_deployment() {
-    logging::log_info &quot;Verifying deployment...&quot;
+verify_deployment<span class="o">()</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span>logging::log_info<span class="w"> </span><span class="s2">&quot;Verifying deployment...&quot;</span>
 
-    # Check service status
-    systemctl status &quot;$SERVICE_NAME&quot; --no-pager || true
+<span class="w">    </span><span class="c1"># Check service status</span>
+<span class="w">    </span>systemctl<span class="w"> </span>status<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$SERVICE_NAME</span><span class="s2">&quot;</span><span class="w"> </span>--no-pager<span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nb">true</span>
 
-    # Check application health
-    sleep 5  # Give app time to initialize
-    if curl -sf &quot;http://localhost:8080/health&quot; &gt;/dev/null 2&gt;&amp;1; then
-        logging::log_info &quot;Health check passed&quot;
-    else
-        logging::log_error &quot;Health check failed&quot;
-        systemctl stop &quot;$SERVICE_NAME&quot;
-        logging::log_fatal &quot;Deployment verification failed&quot;
-    fi
+<span class="w">    </span><span class="c1"># Check application health</span>
+<span class="w">    </span>sleep<span class="w"> </span><span class="m">5</span><span class="w">  </span><span class="c1"># Give app time to initialize</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span>curl<span class="w"> </span>-sf<span class="w"> </span><span class="s2">&quot;http://localhost:8080/health&quot;</span><span class="w"> </span>&gt;/dev/null<span class="w"> </span><span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">        </span>logging::log_info<span class="w"> </span><span class="s2">&quot;Health check passed&quot;</span>
+<span class="w">    </span><span class="k">else</span>
+<span class="w">        </span>logging::log_error<span class="w"> </span><span class="s2">&quot;Health check failed&quot;</span>
+<span class="w">        </span>systemctl<span class="w"> </span>stop<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$SERVICE_NAME</span><span class="s2">&quot;</span>
+<span class="w">        </span>logging::log_fatal<span class="w"> </span><span class="s2">&quot;Deployment verification failed&quot;</span>
+<span class="w">    </span><span class="k">fi</span>
 
-    # Check version endpoint
-    local reported_version
-    if reported_version=$(curl -sf &quot;http://localhost:8080/version&quot; 2&gt;/dev/null); then
-        if [[ &quot;$reported_version&quot; == &quot;$VERSION&quot; ]]; then
-            logging::log_info &quot;Version verification passed: $reported_version&quot;
-        else
-            logging::log_warn &quot;Version mismatch: expected $VERSION, got $reported_version&quot;
-        fi
-    fi
-}
+<span class="w">    </span><span class="c1"># Check version endpoint</span>
+<span class="w">    </span><span class="nb">local</span><span class="w"> </span>reported_version
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nv">reported_version</span><span class="o">=</span><span class="k">$(</span>curl<span class="w"> </span>-sf<span class="w"> </span><span class="s2">&quot;http://localhost:8080/version&quot;</span><span class="w"> </span><span class="m">2</span>&gt;/dev/null<span class="k">)</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="o">[[</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$reported_version</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$VERSION</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">]]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">            </span>logging::log_info<span class="w"> </span><span class="s2">&quot;Version verification passed: </span><span class="nv">$reported_version</span><span class="s2">&quot;</span>
+<span class="w">        </span><span class="k">else</span>
+<span class="w">            </span>logging::log_warn<span class="w"> </span><span class="s2">&quot;Version mismatch: expected </span><span class="nv">$VERSION</span><span class="s2">, got </span><span class="nv">$reported_version</span><span class="s2">&quot;</span>
+<span class="w">        </span><span class="k">fi</span>
+<span class="w">    </span><span class="k">fi</span>
+<span class="o">}</span>
 
 deploy_service
-</code></pre>
+</code></pre></div>
 <hr />
 <h2 id="multi-script-coordination">Multi-Script Coordination</h2>
 <h3 id="orchestration-script">Orchestration Script</h3>
-<pre><code class="language-bash">#!/usr/bin/env bash
-set -Eeuo pipefail
+<div class="highlight"><pre><span></span><code><span class="ch">#!/usr/bin/env bash</span>
+<span class="nb">set</span><span class="w"> </span>-Eeuo<span class="w"> </span>pipefail
 
-source ./logging.lib.sh
-logging::init &quot;orchestrator&quot;
+<span class="nb">source</span><span class="w"> </span>./logging.lib.sh
+logging::init<span class="w"> </span><span class="s2">&quot;orchestrator&quot;</span>
 
-readonly SCRIPTS_DIR=&quot;./scripts&quot;
-readonly PARALLEL_JOBS=3
+<span class="nb">readonly</span><span class="w"> </span><span class="nv">SCRIPTS_DIR</span><span class="o">=</span><span class="s2">&quot;./scripts&quot;</span>
+<span class="nb">readonly</span><span class="w"> </span><span class="nv">PARALLEL_JOBS</span><span class="o">=</span><span class="m">3</span>
 
-run_pipeline() {
-    logging::log_info &quot;Starting pipeline orchestration&quot;
+run_pipeline<span class="o">()</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span>logging::log_info<span class="w"> </span><span class="s2">&quot;Starting pipeline orchestration&quot;</span>
 
-    # Phase 1: Preparation (sequential)
-    run_phase &quot;preparation&quot; &quot;prepare-environment.sh&quot; &quot;download-dependencies.sh&quot;
+<span class="w">    </span><span class="c1"># Phase 1: Preparation (sequential)</span>
+<span class="w">    </span>run_phase<span class="w"> </span><span class="s2">&quot;preparation&quot;</span><span class="w"> </span><span class="s2">&quot;prepare-environment.sh&quot;</span><span class="w"> </span><span class="s2">&quot;download-dependencies.sh&quot;</span>
 
-    # Phase 2: Processing (parallel)
-    run_phase_parallel &quot;processing&quot; &quot;process-data-1.sh&quot; &quot;process-data-2.sh&quot; &quot;process-data-3.sh&quot;
+<span class="w">    </span><span class="c1"># Phase 2: Processing (parallel)</span>
+<span class="w">    </span>run_phase_parallel<span class="w"> </span><span class="s2">&quot;processing&quot;</span><span class="w"> </span><span class="s2">&quot;process-data-1.sh&quot;</span><span class="w"> </span><span class="s2">&quot;process-data-2.sh&quot;</span><span class="w"> </span><span class="s2">&quot;process-data-3.sh&quot;</span>
 
-    # Phase 3: Cleanup (sequential)
-    run_phase &quot;cleanup&quot; &quot;generate-reports.sh&quot; &quot;cleanup-temp.sh&quot;
+<span class="w">    </span><span class="c1"># Phase 3: Cleanup (sequential)</span>
+<span class="w">    </span>run_phase<span class="w"> </span><span class="s2">&quot;cleanup&quot;</span><span class="w"> </span><span class="s2">&quot;generate-reports.sh&quot;</span><span class="w"> </span><span class="s2">&quot;cleanup-temp.sh&quot;</span>
 
-    logging::log_info &quot;Pipeline completed successfully&quot;
-}
+<span class="w">    </span>logging::log_info<span class="w"> </span><span class="s2">&quot;Pipeline completed successfully&quot;</span>
+<span class="o">}</span>
 
-run_phase() {
-    local phase_name=&quot;$1&quot;
-    shift
+run_phase<span class="o">()</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span><span class="nb">local</span><span class="w"> </span><span class="nv">phase_name</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$1</span><span class="s2">&quot;</span>
+<span class="w">    </span><span class="nb">shift</span>
 
-    logging::log_info &quot;Starting phase: $phase_name&quot;
+<span class="w">    </span>logging::log_info<span class="w"> </span><span class="s2">&quot;Starting phase: </span><span class="nv">$phase_name</span><span class="s2">&quot;</span>
 
-    for script in &quot;$@&quot;; do
-        run_script &quot;$script&quot;
-    done
+<span class="w">    </span><span class="k">for</span><span class="w"> </span>script<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$@</span><span class="s2">&quot;</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">        </span>run_script<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$script</span><span class="s2">&quot;</span>
+<span class="w">    </span><span class="k">done</span>
 
-    logging::log_info &quot;Phase completed: $phase_name&quot;
-}
+<span class="w">    </span>logging::log_info<span class="w"> </span><span class="s2">&quot;Phase completed: </span><span class="nv">$phase_name</span><span class="s2">&quot;</span>
+<span class="o">}</span>
 
-run_phase_parallel() {
-    local phase_name=&quot;$1&quot;
-    shift
+run_phase_parallel<span class="o">()</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span><span class="nb">local</span><span class="w"> </span><span class="nv">phase_name</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$1</span><span class="s2">&quot;</span>
+<span class="w">    </span><span class="nb">shift</span>
 
-    logging::log_info &quot;Starting parallel phase: $phase_name&quot;
+<span class="w">    </span>logging::log_info<span class="w"> </span><span class="s2">&quot;Starting parallel phase: </span><span class="nv">$phase_name</span><span class="s2">&quot;</span>
 
-    # Create temporary directory for job tracking
-    local job_dir
-    job_dir=$(mktemp -d)
-    local -a pids=()
+<span class="w">    </span><span class="c1"># Create temporary directory for job tracking</span>
+<span class="w">    </span><span class="nb">local</span><span class="w"> </span>job_dir
+<span class="w">    </span><span class="nv">job_dir</span><span class="o">=</span><span class="k">$(</span>mktemp<span class="w"> </span>-d<span class="k">)</span>
+<span class="w">    </span><span class="nb">local</span><span class="w"> </span>-a<span class="w"> </span><span class="nv">pids</span><span class="o">=()</span>
 
-    # Start jobs
-    for script in &quot;$@&quot;; do
-        (
-            run_script &quot;$script&quot;
-            echo $? &gt; &quot;$job_dir/$(basename &quot;$script&quot;).exit&quot;
-        ) &amp;
-        pids+=($!)
+<span class="w">    </span><span class="c1"># Start jobs</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span>script<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$@</span><span class="s2">&quot;</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">        </span><span class="o">(</span>
+<span class="w">            </span>run_script<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$script</span><span class="s2">&quot;</span>
+<span class="w">            </span><span class="nb">echo</span><span class="w"> </span><span class="nv">$?</span><span class="w"> </span>&gt;<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$job_dir</span><span class="s2">/</span><span class="k">$(</span>basename<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$script</span><span class="s2">&quot;</span><span class="k">)</span><span class="s2">.exit&quot;</span>
+<span class="w">        </span><span class="o">)</span><span class="w"> </span><span class="p">&amp;</span>
+<span class="w">        </span><span class="nv">pids</span><span class="o">+=(</span><span class="nv">$!</span><span class="o">)</span>
 
-        # Limit concurrent jobs
-        if [[ ${#pids[@]} -ge $PARALLEL_JOBS ]]; then
-            wait_for_job pids &quot;$job_dir&quot;
-        fi
-    done
+<span class="w">        </span><span class="c1"># Limit concurrent jobs</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="o">[[</span><span class="w"> </span><span class="si">${#</span><span class="nv">pids</span><span class="p">[@]</span><span class="si">}</span><span class="w"> </span>-ge<span class="w"> </span><span class="nv">$PARALLEL_JOBS</span><span class="w"> </span><span class="o">]]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">            </span>wait_for_job<span class="w"> </span>pids<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$job_dir</span><span class="s2">&quot;</span>
+<span class="w">        </span><span class="k">fi</span>
+<span class="w">    </span><span class="k">done</span>
 
-    # Wait for remaining jobs
-    while [[ ${#pids[@]} -gt 0 ]]; do
-        wait_for_job pids &quot;$job_dir&quot;
-    done
+<span class="w">    </span><span class="c1"># Wait for remaining jobs</span>
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="o">[[</span><span class="w"> </span><span class="si">${#</span><span class="nv">pids</span><span class="p">[@]</span><span class="si">}</span><span class="w"> </span>-gt<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="o">]]</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">        </span>wait_for_job<span class="w"> </span>pids<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$job_dir</span><span class="s2">&quot;</span>
+<span class="w">    </span><span class="k">done</span>
 
-    # Check all exit codes
-    local failed_scripts=()
-    for script in &quot;$@&quot;; do
-        local exit_file=&quot;$job_dir/$(basename &quot;$script&quot;).exit&quot;
-        if [[ -f &quot;$exit_file&quot; ]]; then
-            local exit_code
-            exit_code=$(cat &quot;$exit_file&quot;)
-            if [[ $exit_code -ne 0 ]]; then
-                failed_scripts+=(&quot;$script&quot;)
-            fi
-        fi
-    done
+<span class="w">    </span><span class="c1"># Check all exit codes</span>
+<span class="w">    </span><span class="nb">local</span><span class="w"> </span><span class="nv">failed_scripts</span><span class="o">=()</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span>script<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$@</span><span class="s2">&quot;</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">        </span><span class="nb">local</span><span class="w"> </span><span class="nv">exit_file</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$job_dir</span><span class="s2">/</span><span class="k">$(</span>basename<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$script</span><span class="s2">&quot;</span><span class="k">)</span><span class="s2">.exit&quot;</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="o">[[</span><span class="w"> </span>-f<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$exit_file</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">]]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">            </span><span class="nb">local</span><span class="w"> </span>exit_code
+<span class="w">            </span><span class="nv">exit_code</span><span class="o">=</span><span class="k">$(</span>cat<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$exit_file</span><span class="s2">&quot;</span><span class="k">)</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="o">[[</span><span class="w"> </span><span class="nv">$exit_code</span><span class="w"> </span>-ne<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="o">]]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">                </span><span class="nv">failed_scripts</span><span class="o">+=(</span><span class="s2">&quot;</span><span class="nv">$script</span><span class="s2">&quot;</span><span class="o">)</span>
+<span class="w">            </span><span class="k">fi</span>
+<span class="w">        </span><span class="k">fi</span>
+<span class="w">    </span><span class="k">done</span>
 
-    rm -rf &quot;$job_dir&quot;
+<span class="w">    </span>rm<span class="w"> </span>-rf<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$job_dir</span><span class="s2">&quot;</span>
 
-    if [[ ${#failed_scripts[@]} -gt 0 ]]; then
-        logging::log_fatal &quot;Failed scripts in $phase_name: ${failed_scripts[*]}&quot;
-    fi
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="o">[[</span><span class="w"> </span><span class="si">${#</span><span class="nv">failed_scripts</span><span class="p">[@]</span><span class="si">}</span><span class="w"> </span>-gt<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="o">]]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">        </span>logging::log_fatal<span class="w"> </span><span class="s2">&quot;Failed scripts in </span><span class="nv">$phase_name</span><span class="s2">: </span><span class="si">${</span><span class="nv">failed_scripts</span><span class="p">[*]</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="w">    </span><span class="k">fi</span>
 
-    logging::log_info &quot;Parallel phase completed: $phase_name&quot;
-}
+<span class="w">    </span>logging::log_info<span class="w"> </span><span class="s2">&quot;Parallel phase completed: </span><span class="nv">$phase_name</span><span class="s2">&quot;</span>
+<span class="o">}</span>
 
-wait_for_job() {
-    local -n pids_ref=$1
-    local job_dir=&quot;$2&quot;
+wait_for_job<span class="o">()</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span><span class="nb">local</span><span class="w"> </span>-n<span class="w"> </span><span class="nv">pids_ref</span><span class="o">=</span><span class="nv">$1</span>
+<span class="w">    </span><span class="nb">local</span><span class="w"> </span><span class="nv">job_dir</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$2</span><span class="s2">&quot;</span>
 
-    # Wait for first job to complete
-    wait &quot;${pids_ref[0]}&quot;
+<span class="w">    </span><span class="c1"># Wait for first job to complete</span>
+<span class="w">    </span><span class="nb">wait</span><span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">pids_ref</span><span class="p">[0]</span><span class="si">}</span><span class="s2">&quot;</span>
 
-    # Remove completed job from array
-    pids_ref=(&quot;${pids_ref[@]:1}&quot;)
-}
+<span class="w">    </span><span class="c1"># Remove completed job from array</span>
+<span class="w">    </span><span class="nv">pids_ref</span><span class="o">=(</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">pids_ref</span><span class="p">[@]:</span><span class="nv">1</span><span class="si">}</span><span class="s2">&quot;</span><span class="o">)</span>
+<span class="o">}</span>
 
-run_script() {
-    local script=&quot;$1&quot;
-    local script_path=&quot;$SCRIPTS_DIR/$script&quot;
+run_script<span class="o">()</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span><span class="nb">local</span><span class="w"> </span><span class="nv">script</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$1</span><span class="s2">&quot;</span>
+<span class="w">    </span><span class="nb">local</span><span class="w"> </span><span class="nv">script_path</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$SCRIPTS_DIR</span><span class="s2">/</span><span class="nv">$script</span><span class="s2">&quot;</span>
 
-    if [[ ! -f &quot;$script_path&quot; ]]; then
-        logging::log_fatal &quot;Script not found: $script_path&quot;
-    fi
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="o">[[</span><span class="w"> </span>!<span class="w"> </span>-f<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$script_path</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">]]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">        </span>logging::log_fatal<span class="w"> </span><span class="s2">&quot;Script not found: </span><span class="nv">$script_path</span><span class="s2">&quot;</span>
+<span class="w">    </span><span class="k">fi</span>
 
-    if [[ ! -x &quot;$script_path&quot; ]]; then
-        logging::log_fatal &quot;Script not executable: $script_path&quot;
-    fi
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="o">[[</span><span class="w"> </span>!<span class="w"> </span>-x<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$script_path</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">]]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">        </span>logging::log_fatal<span class="w"> </span><span class="s2">&quot;Script not executable: </span><span class="nv">$script_path</span><span class="s2">&quot;</span>
+<span class="w">    </span><span class="k">fi</span>
 
-    logging::log_info &quot;Executing: $script&quot;
+<span class="w">    </span>logging::log_info<span class="w"> </span><span class="s2">&quot;Executing: </span><span class="nv">$script</span><span class="s2">&quot;</span>
 
-    # Execute script with timeout
-    if timeout 300 &quot;$script_path&quot; 2&gt;&amp;1 | while IFS= read -r line; do
-        logging::log_info &quot;[$script] $line&quot;
-    done; then
-        logging::log_info &quot;Script completed: $script&quot;
-    else
-        local exit_code=${PIPESTATUS[0]}
-        if [[ $exit_code -eq 124 ]]; then
-            logging::log_error &quot;Script timed out: $script&quot;
-        else
-            logging::log_error &quot;Script failed with exit code $exit_code: $script&quot;
-        fi
-        return $exit_code
-    fi
-}
+<span class="w">    </span><span class="c1"># Execute script with timeout</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span>timeout<span class="w"> </span><span class="m">300</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$script_path</span><span class="s2">&quot;</span><span class="w"> </span><span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="k">while</span><span class="w"> </span><span class="nv">IFS</span><span class="o">=</span><span class="w"> </span><span class="nb">read</span><span class="w"> </span>-r<span class="w"> </span>line<span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">        </span>logging::log_info<span class="w"> </span><span class="s2">&quot;[</span><span class="nv">$script</span><span class="s2">] </span><span class="nv">$line</span><span class="s2">&quot;</span>
+<span class="w">    </span><span class="k">done</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">        </span>logging::log_info<span class="w"> </span><span class="s2">&quot;Script completed: </span><span class="nv">$script</span><span class="s2">&quot;</span>
+<span class="w">    </span><span class="k">else</span>
+<span class="w">        </span><span class="nb">local</span><span class="w"> </span><span class="nv">exit_code</span><span class="o">=</span><span class="si">${</span><span class="nv">PIPESTATUS</span><span class="p">[0]</span><span class="si">}</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="o">[[</span><span class="w"> </span><span class="nv">$exit_code</span><span class="w"> </span>-eq<span class="w"> </span><span class="m">124</span><span class="w"> </span><span class="o">]]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">            </span>logging::log_error<span class="w"> </span><span class="s2">&quot;Script timed out: </span><span class="nv">$script</span><span class="s2">&quot;</span>
+<span class="w">        </span><span class="k">else</span>
+<span class="w">            </span>logging::log_error<span class="w"> </span><span class="s2">&quot;Script failed with exit code </span><span class="nv">$exit_code</span><span class="s2">: </span><span class="nv">$script</span><span class="s2">&quot;</span>
+<span class="w">        </span><span class="k">fi</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nv">$exit_code</span>
+<span class="w">    </span><span class="k">fi</span>
+<span class="o">}</span>
 
 run_pipeline
-</code></pre>
+</code></pre></div>
 <hr />
 <h2 id="best-practices-examples">Best Practices Examples</h2>
 <h3 id="error-recovery-and-resilience">Error Recovery and Resilience</h3>
-<pre><code class="language-bash">#!/usr/bin/env bash
-set -Eeuo pipefail
+<div class="highlight"><pre><span></span><code><span class="ch">#!/usr/bin/env bash</span>
+<span class="nb">set</span><span class="w"> </span>-Eeuo<span class="w"> </span>pipefail
 
-source ./logging.lib.sh
-logging::init &quot;resilient-script&quot;
+<span class="nb">source</span><span class="w"> </span>./logging.lib.sh
+logging::init<span class="w"> </span><span class="s2">&quot;resilient-script&quot;</span>
 
-# Circuit breaker pattern
-declare -g FAILURE_COUNT=0
-declare -g MAX_FAILURES=5
-declare -g CIRCUIT_OPEN=false
+<span class="c1"># Circuit breaker pattern</span>
+<span class="nb">declare</span><span class="w"> </span>-g<span class="w"> </span><span class="nv">FAILURE_COUNT</span><span class="o">=</span><span class="m">0</span>
+<span class="nb">declare</span><span class="w"> </span>-g<span class="w"> </span><span class="nv">MAX_FAILURES</span><span class="o">=</span><span class="m">5</span>
+<span class="nb">declare</span><span class="w"> </span>-g<span class="w"> </span><span class="nv">CIRCUIT_OPEN</span><span class="o">=</span><span class="nb">false</span>
 
-call_external_service() {
-    if [[ &quot;$CIRCUIT_OPEN&quot; == &quot;true&quot; ]]; then
-        logging::log_warn &quot;Circuit breaker open, skipping service call&quot;
-        return 1
-    fi
+call_external_service<span class="o">()</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="o">[[</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$CIRCUIT_OPEN</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">&quot;true&quot;</span><span class="w"> </span><span class="o">]]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">        </span>logging::log_warn<span class="w"> </span><span class="s2">&quot;Circuit breaker open, skipping service call&quot;</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="m">1</span>
+<span class="w">    </span><span class="k">fi</span>
 
-    if external_service_call; then
-        # Reset on success
-        FAILURE_COUNT=0
-        logging::log_info &quot;Service call successful&quot;
-        return 0
-    else
-        ((FAILURE_COUNT++))
-        logging::log_error &quot;Service call failed (failure count: $FAILURE_COUNT)&quot;
+<span class="w">    </span><span class="k">if</span><span class="w"> </span>external_service_call<span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">        </span><span class="c1"># Reset on success</span>
+<span class="w">        </span><span class="nv">FAILURE_COUNT</span><span class="o">=</span><span class="m">0</span>
+<span class="w">        </span>logging::log_info<span class="w"> </span><span class="s2">&quot;Service call successful&quot;</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="m">0</span>
+<span class="w">    </span><span class="k">else</span>
+<span class="w">        </span><span class="o">((</span>FAILURE_COUNT++<span class="o">))</span>
+<span class="w">        </span>logging::log_error<span class="w"> </span><span class="s2">&quot;Service call failed (failure count: </span><span class="nv">$FAILURE_COUNT</span><span class="s2">)&quot;</span>
 
-        if [[ $FAILURE_COUNT -ge $MAX_FAILURES ]]; then
-            CIRCUIT_OPEN=true
-            logging::log_warn &quot;Circuit breaker opened after $MAX_FAILURES failures&quot;
-        fi
-        return 1
-    fi
-}
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="o">[[</span><span class="w"> </span><span class="nv">$FAILURE_COUNT</span><span class="w"> </span>-ge<span class="w"> </span><span class="nv">$MAX_FAILURES</span><span class="w"> </span><span class="o">]]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">            </span><span class="nv">CIRCUIT_OPEN</span><span class="o">=</span><span class="nb">true</span>
+<span class="w">            </span>logging::log_warn<span class="w"> </span><span class="s2">&quot;Circuit breaker opened after </span><span class="nv">$MAX_FAILURES</span><span class="s2"> failures&quot;</span>
+<span class="w">        </span><span class="k">fi</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="m">1</span>
+<span class="w">    </span><span class="k">fi</span>
+<span class="o">}</span>
 
-# Graceful degradation
-process_with_fallback() {
-    local data=&quot;$1&quot;
+<span class="c1"># Graceful degradation</span>
+process_with_fallback<span class="o">()</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span><span class="nb">local</span><span class="w"> </span><span class="nv">data</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$1</span><span class="s2">&quot;</span>
 
-    if ! primary_processor &quot;$data&quot;; then
-        logging::log_warn &quot;Primary processor failed, trying secondary&quot;
+<span class="w">    </span><span class="k">if</span><span class="w"> </span>!<span class="w"> </span>primary_processor<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$data</span><span class="s2">&quot;</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">        </span>logging::log_warn<span class="w"> </span><span class="s2">&quot;Primary processor failed, trying secondary&quot;</span>
 
-        if ! secondary_processor &quot;$data&quot;; then
-            logging::log_warn &quot;Secondary processor failed, using basic fallback&quot;
-            basic_processor &quot;$data&quot;
-        fi
-    fi
-}
+<span class="w">        </span><span class="k">if</span><span class="w"> </span>!<span class="w"> </span>secondary_processor<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$data</span><span class="s2">&quot;</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">            </span>logging::log_warn<span class="w"> </span><span class="s2">&quot;Secondary processor failed, using basic fallback&quot;</span>
+<span class="w">            </span>basic_processor<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$data</span><span class="s2">&quot;</span>
+<span class="w">        </span><span class="k">fi</span>
+<span class="w">    </span><span class="k">fi</span>
+<span class="o">}</span>
 
-# Resource cleanup
-cleanup_resources() {
-    logging::log_info &quot;Cleaning up resources...&quot;
+<span class="c1"># Resource cleanup</span>
+cleanup_resources<span class="o">()</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span>logging::log_info<span class="w"> </span><span class="s2">&quot;Cleaning up resources...&quot;</span>
 
-    # Remove temporary files
-    if [[ -n &quot;${TEMP_DIR:-}&quot; &amp;&amp; -d &quot;$TEMP_DIR&quot; ]]; then
-        rm -rf &quot;$TEMP_DIR&quot;
-        logging::log_info &quot;Removed temporary directory: $TEMP_DIR&quot;
-    fi
+<span class="w">    </span><span class="c1"># Remove temporary files</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="o">[[</span><span class="w"> </span>-n<span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">TEMP_DIR</span><span class="k">:-</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>-d<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$TEMP_DIR</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">]]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">        </span>rm<span class="w"> </span>-rf<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$TEMP_DIR</span><span class="s2">&quot;</span>
+<span class="w">        </span>logging::log_info<span class="w"> </span><span class="s2">&quot;Removed temporary directory: </span><span class="nv">$TEMP_DIR</span><span class="s2">&quot;</span>
+<span class="w">    </span><span class="k">fi</span>
 
-    # Close file descriptors
-    exec 3&gt;&amp;- 2&gt;/dev/null || true
-    exec 4&gt;&amp;- 2&gt;/dev/null || true
+<span class="w">    </span><span class="c1"># Close file descriptors</span>
+<span class="w">    </span><span class="nb">exec</span><span class="w"> </span><span class="m">3</span>&gt;<span class="p">&amp;</span>-<span class="w"> </span><span class="m">2</span>&gt;/dev/null<span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nb">true</span>
+<span class="w">    </span><span class="nb">exec</span><span class="w"> </span><span class="m">4</span>&gt;<span class="p">&amp;</span>-<span class="w"> </span><span class="m">2</span>&gt;/dev/null<span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nb">true</span>
 
-    # Kill background processes
-    if [[ -n &quot;${BG_PID:-}&quot; ]]; then
-        kill &quot;$BG_PID&quot; 2&gt;/dev/null || true
-        logging::log_info &quot;Terminated background process: $BG_PID&quot;
-    fi
-}
+<span class="w">    </span><span class="c1"># Kill background processes</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="o">[[</span><span class="w"> </span>-n<span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">BG_PID</span><span class="k">:-</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">]]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">        </span><span class="nb">kill</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$BG_PID</span><span class="s2">&quot;</span><span class="w"> </span><span class="m">2</span>&gt;/dev/null<span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nb">true</span>
+<span class="w">        </span>logging::log_info<span class="w"> </span><span class="s2">&quot;Terminated background process: </span><span class="nv">$BG_PID</span><span class="s2">&quot;</span>
+<span class="w">    </span><span class="k">fi</span>
+<span class="o">}</span>
 
-# Install cleanup trap
-trap cleanup_resources EXIT
-</code></pre>
+<span class="c1"># Install cleanup trap</span>
+<span class="nb">trap</span><span class="w"> </span>cleanup_resources<span class="w"> </span>EXIT
+</code></pre></div>
 <h3 id="configuration-and-environment-management">Configuration and Environment Management</h3>
-<pre><code class="language-bash">#!/usr/bin/env bash
-set -Eeuo pipefail
+<div class="highlight"><pre><span></span><code><span class="ch">#!/usr/bin/env bash</span>
+<span class="nb">set</span><span class="w"> </span>-Eeuo<span class="w"> </span>pipefail
 
-source ./logging.lib.sh
-logging::init &quot;config-manager&quot;
+<span class="nb">source</span><span class="w"> </span>./logging.lib.sh
+logging::init<span class="w"> </span><span class="s2">&quot;config-manager&quot;</span>
 
-# Configuration loading with validation
-load_configuration() {
-    local config_file=&quot;${1:-config.env}&quot;
+<span class="c1"># Configuration loading with validation</span>
+load_configuration<span class="o">()</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span><span class="nb">local</span><span class="w"> </span><span class="nv">config_file</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">1</span><span class="k">:-</span><span class="nv">config</span><span class="p">.env</span><span class="si">}</span><span class="s2">&quot;</span>
 
-    if [[ ! -f &quot;$config_file&quot; ]]; then
-        logging::log_fatal &quot;Configuration file not found: $config_file&quot;
-    fi
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="o">[[</span><span class="w"> </span>!<span class="w"> </span>-f<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$config_file</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">]]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">        </span>logging::log_fatal<span class="w"> </span><span class="s2">&quot;Configuration file not found: </span><span class="nv">$config_file</span><span class="s2">&quot;</span>
+<span class="w">    </span><span class="k">fi</span>
 
-    logging::log_info &quot;Loading configuration from: $config_file&quot;
+<span class="w">    </span>logging::log_info<span class="w"> </span><span class="s2">&quot;Loading configuration from: </span><span class="nv">$config_file</span><span class="s2">&quot;</span>
 
-    # Source configuration
-    set -a  # Export all variables
-    source &quot;$config_file&quot;
-    set +a
+<span class="w">    </span><span class="c1"># Source configuration</span>
+<span class="w">    </span><span class="nb">set</span><span class="w"> </span>-a<span class="w">  </span><span class="c1"># Export all variables</span>
+<span class="w">    </span><span class="nb">source</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$config_file</span><span class="s2">&quot;</span>
+<span class="w">    </span><span class="nb">set</span><span class="w"> </span>+a
 
-    # Validate required variables
-    validate_required_config
+<span class="w">    </span><span class="c1"># Validate required variables</span>
+<span class="w">    </span>validate_required_config
 
-    # Log configuration (without sensitive values)
-    log_configuration
-}
+<span class="w">    </span><span class="c1"># Log configuration (without sensitive values)</span>
+<span class="w">    </span>log_configuration
+<span class="o">}</span>
 
-validate_required_config() {
-    local required_vars=(
-        &quot;DATABASE_URL&quot;
-        &quot;API_KEY&quot;
-        &quot;SERVICE_PORT&quot;
-        &quot;LOG_LEVEL&quot;
-    )
+validate_required_config<span class="o">()</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span><span class="nb">local</span><span class="w"> </span><span class="nv">required_vars</span><span class="o">=(</span>
+<span class="w">        </span><span class="s2">&quot;DATABASE_URL&quot;</span>
+<span class="w">        </span><span class="s2">&quot;API_KEY&quot;</span>
+<span class="w">        </span><span class="s2">&quot;SERVICE_PORT&quot;</span>
+<span class="w">        </span><span class="s2">&quot;LOG_LEVEL&quot;</span>
+<span class="w">    </span><span class="o">)</span>
 
-    logging::log_info &quot;Validating configuration...&quot;
+<span class="w">    </span>logging::log_info<span class="w"> </span><span class="s2">&quot;Validating configuration...&quot;</span>
 
-    for var in &quot;${required_vars[@]}&quot;; do
-        if [[ -z &quot;${!var:-}&quot; ]]; then
-            logging::log_fatal &quot;Required configuration missing: $var&quot;
-        fi
-    done
+<span class="w">    </span><span class="k">for</span><span class="w"> </span>var<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">required_vars</span><span class="p">[@]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="o">[[</span><span class="w"> </span>-z<span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="p">!var</span><span class="k">:-</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">]]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">            </span>logging::log_fatal<span class="w"> </span><span class="s2">&quot;Required configuration missing: </span><span class="nv">$var</span><span class="s2">&quot;</span>
+<span class="w">        </span><span class="k">fi</span>
+<span class="w">    </span><span class="k">done</span>
 
-    # Validate specific formats
-    if [[ ! &quot;$SERVICE_PORT&quot; =~ ^[0-9]+$ ]] || [[ &quot;$SERVICE_PORT&quot; -lt 1 || &quot;$SERVICE_PORT&quot; -gt 65535 ]]; then
-        logging::log_fatal &quot;Invalid SERVICE_PORT: $SERVICE_PORT&quot;
-    fi
+<span class="w">    </span><span class="c1"># Validate specific formats</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="o">[[</span><span class="w"> </span>!<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$SERVICE_PORT</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">=</span>~<span class="w"> </span>^<span class="o">[</span><span class="m">0</span>-9<span class="o">]</span>+$<span class="w"> </span><span class="o">]]</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="o">[[</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$SERVICE_PORT</span><span class="s2">&quot;</span><span class="w"> </span>-lt<span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$SERVICE_PORT</span><span class="s2">&quot;</span><span class="w"> </span>-gt<span class="w"> </span><span class="m">65535</span><span class="w"> </span><span class="o">]]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">        </span>logging::log_fatal<span class="w"> </span><span class="s2">&quot;Invalid SERVICE_PORT: </span><span class="nv">$SERVICE_PORT</span><span class="s2">&quot;</span>
+<span class="w">    </span><span class="k">fi</span>
 
-    if [[ ! &quot;$LOG_LEVEL&quot; =~ ^(DEBUG|INFO|WARN|ERROR)$ ]]; then
-        logging::log_fatal &quot;Invalid LOG_LEVEL: $LOG_LEVEL&quot;
-    fi
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="o">[[</span><span class="w"> </span>!<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$LOG_LEVEL</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">=</span>~<span class="w"> </span>^<span class="o">(</span>DEBUG<span class="p">|</span>INFO<span class="p">|</span>WARN<span class="p">|</span>ERROR<span class="o">)</span>$<span class="w"> </span><span class="o">]]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">        </span>logging::log_fatal<span class="w"> </span><span class="s2">&quot;Invalid LOG_LEVEL: </span><span class="nv">$LOG_LEVEL</span><span class="s2">&quot;</span>
+<span class="w">    </span><span class="k">fi</span>
 
-    logging::log_info &quot;Configuration validation passed&quot;
-}
+<span class="w">    </span>logging::log_info<span class="w"> </span><span class="s2">&quot;Configuration validation passed&quot;</span>
+<span class="o">}</span>
 
-log_configuration() {
-    logging::log_info &quot;Active configuration:&quot;
-    logging::log_info &quot;  SERVICE_PORT=$SERVICE_PORT&quot;
-    logging::log_info &quot;  LOG_LEVEL=$LOG_LEVEL&quot;
-    logging::log_info &quot;  DATABASE_URL=${DATABASE_URL/password=*/password=***}&quot;
-    logging::log_info &quot;  API_KEY=${API_KEY:0:8}...&quot;
-}
+log_configuration<span class="o">()</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span>logging::log_info<span class="w"> </span><span class="s2">&quot;Active configuration:&quot;</span>
+<span class="w">    </span>logging::log_info<span class="w"> </span><span class="s2">&quot;  SERVICE_PORT=</span><span class="nv">$SERVICE_PORT</span><span class="s2">&quot;</span>
+<span class="w">    </span>logging::log_info<span class="w"> </span><span class="s2">&quot;  LOG_LEVEL=</span><span class="nv">$LOG_LEVEL</span><span class="s2">&quot;</span>
+<span class="w">    </span>logging::log_info<span class="w"> </span><span class="s2">&quot;  DATABASE_URL=</span><span class="si">${</span><span class="nv">DATABASE_URL</span><span class="p">/password=*/password=***</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="w">    </span>logging::log_info<span class="w"> </span><span class="s2">&quot;  API_KEY=</span><span class="si">${</span><span class="nv">API_KEY</span><span class="p">:</span><span class="nv">0</span><span class="p">:</span><span class="nv">8</span><span class="si">}</span><span class="s2">...&quot;</span>
+<span class="o">}</span>
 
-# Environment-specific handling
-setup_environment() {
-    local environment=&quot;${ENVIRONMENT:-development}&quot;
+<span class="c1"># Environment-specific handling</span>
+setup_environment<span class="o">()</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span><span class="nb">local</span><span class="w"> </span><span class="nv">environment</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">ENVIRONMENT</span><span class="k">:-</span><span class="nv">development</span><span class="si">}</span><span class="s2">&quot;</span>
 
-    case &quot;$environment&quot; in
-        development)
-            export DEBUG=true
-            export LOG_LEVEL=DEBUG
-            logging::log_info &quot;Development environment configured&quot;
-            ;;
-        staging)
-            export DEBUG=false
-            export LOG_LEVEL=INFO
-            logging::log_info &quot;Staging environment configured&quot;
-            ;;
-        production)
-            export DEBUG=false
-            export LOG_LEVEL=WARN
-            logging::log_info &quot;Production environment configured&quot;
-            ;;
-        *)
-            logging::log_fatal &quot;Unknown environment: $environment&quot;
-            ;;
-    esac
-}
-</code></pre>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$environment</span><span class="s2">&quot;</span><span class="w"> </span><span class="k">in</span>
+<span class="w">        </span>development<span class="o">)</span>
+<span class="w">            </span><span class="nb">export</span><span class="w"> </span><span class="nv">DEBUG</span><span class="o">=</span><span class="nb">true</span>
+<span class="w">            </span><span class="nb">export</span><span class="w"> </span><span class="nv">LOG_LEVEL</span><span class="o">=</span>DEBUG
+<span class="w">            </span>logging::log_info<span class="w"> </span><span class="s2">&quot;Development environment configured&quot;</span>
+<span class="w">            </span><span class="p">;;</span>
+<span class="w">        </span>staging<span class="o">)</span>
+<span class="w">            </span><span class="nb">export</span><span class="w"> </span><span class="nv">DEBUG</span><span class="o">=</span><span class="nb">false</span>
+<span class="w">            </span><span class="nb">export</span><span class="w"> </span><span class="nv">LOG_LEVEL</span><span class="o">=</span>INFO
+<span class="w">            </span>logging::log_info<span class="w"> </span><span class="s2">&quot;Staging environment configured&quot;</span>
+<span class="w">            </span><span class="p">;;</span>
+<span class="w">        </span>production<span class="o">)</span>
+<span class="w">            </span><span class="nb">export</span><span class="w"> </span><span class="nv">DEBUG</span><span class="o">=</span><span class="nb">false</span>
+<span class="w">            </span><span class="nb">export</span><span class="w"> </span><span class="nv">LOG_LEVEL</span><span class="o">=</span>WARN
+<span class="w">            </span>logging::log_info<span class="w"> </span><span class="s2">&quot;Production environment configured&quot;</span>
+<span class="w">            </span><span class="p">;;</span>
+<span class="w">        </span>*<span class="o">)</span>
+<span class="w">            </span>logging::log_fatal<span class="w"> </span><span class="s2">&quot;Unknown environment: </span><span class="nv">$environment</span><span class="s2">&quot;</span>
+<span class="w">            </span><span class="p">;;</span>
+<span class="w">    </span><span class="k">esac</span>
+<span class="o">}</span>
+</code></pre></div>
 <p>These examples demonstrate production-ready patterns that leverage the full power of the Bashing Logs library, from simple scripts to complex orchestration systems.</p>
 
 
